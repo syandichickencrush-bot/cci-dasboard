@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" href="icon-192.png">
 
-<title>Chicken Crush Indonesia | Live Revenue Dashboard V6.0.3.2</title>
+<title>Chicken Crush Indonesia | Live Revenue Dashboard V6.0.3.3</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <style>
@@ -1483,7 +1483,7 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
 }
 
 /* =========================================================
-   V6.0.3.2 — MOBILE WIDTH / RESPONSIVE HOTFIX
+   V6.0.3.3 — MOBILE WIDTH / RESPONSIVE HOTFIX
    Ensures all app pages use the full phone viewport.
 ========================================================= */
 @media (max-width:900px){
@@ -1546,7 +1546,7 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
   .sidebar-nav{grid-template-columns:repeat(5,minmax(0,1fr))!important;}
 }
 /* =========================================================
-   V6.0.3.2 — MODERN APP LOADING
+   V6.0.3.3 — MODERN APP LOADING
 ========================================================= */
 .app-loading-6032{
   position:fixed;inset:0;z-index:20000;
@@ -1616,10 +1616,278 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
   .loading-title-6032{font-size:15px}
 }
 
+/* =========================================================
+   V6.0.3.3 — DESKTOP COLLAPSIBLE NAV + MODERN REFRESH
+========================================================= */
+
+/* Desktop sidebar collapse fix: overrides the later !important desktop shell. */
+@media (min-width:901px){
+  .app-sidebar{
+    transition:
+      width .30s cubic-bezier(.2,.8,.2,1),
+      box-shadow .30s ease,
+      background .30s ease!important;
+  }
+  .main,
+  #installBannerHost602{
+    transition:
+      margin-left .30s cubic-bezier(.2,.8,.2,1),
+      width .30s cubic-bezier(.2,.8,.2,1)!important;
+  }
+
+  body.sidebar-collapsed .app-sidebar{
+    width:74px!important;
+  }
+  body.sidebar-collapsed .sidebar-title-wrap,
+  body.sidebar-collapsed .sidebar-label,
+  body.sidebar-collapsed .sidebar-foot-text{
+    display:none!important;
+  }
+  body.sidebar-collapsed .sidebar-head{
+    min-height:74px!important;
+    justify-content:center!important;
+    padding:12px!important;
+  }
+  body.sidebar-collapsed .sidebar-collapse{
+    transform:rotate(180deg)!important;
+    margin:0!important;
+  }
+  body.sidebar-collapsed .sidebar-nav{
+    padding:14px 8px!important;
+    gap:8px!important;
+  }
+  body.sidebar-collapsed .sidebar-tab{
+    justify-content:center!important;
+    gap:0!important;
+    padding:0!important;
+  }
+  body.sidebar-collapsed .sidebar-icon{
+    width:100%!important;
+    min-width:0!important;
+  }
+  body.sidebar-collapsed .main,
+  body.sidebar-collapsed #installBannerHost602{
+    margin-left:110px!important;
+    width:min(1540px,calc(100% - 132px))!important;
+  }
+  body.sidebar-collapsed .sidebar-tab:hover::after{
+    left:64px!important;
+  }
+}
+
+/* Refresh button — compact glass control with animated orbit. */
+.refresh-modern{
+  position:relative!important;
+  overflow:hidden!important;
+  isolation:isolate;
+  min-width:92px;
+  padding:0 12px!important;
+  gap:8px!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025))!important;
+  border:1px solid rgba(255,255,255,.085)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035),0 7px 22px rgba(0,0,0,.10)!important;
+  transition:transform .18s ease,border-color .18s ease,background .18s ease,box-shadow .18s ease!important;
+}
+.refresh-modern:before{
+  content:"";
+  position:absolute;
+  inset:-60% -25%;
+  background:linear-gradient(110deg,transparent 38%,rgba(255,255,255,.10) 50%,transparent 62%);
+  transform:translateX(-80%) rotate(6deg);
+  transition:transform .55s ease;
+  z-index:-1;
+}
+.refresh-modern:hover{
+  transform:translateY(-1px);
+  border-color:rgba(106,153,255,.22)!important;
+  background:linear-gradient(180deg,rgba(91,143,249,.10),rgba(255,255,255,.035))!important;
+  box-shadow:0 10px 28px rgba(0,0,0,.18)!important;
+}
+.refresh-modern:hover:before{transform:translateX(80%) rotate(6deg)}
+.refresh-modern:active{transform:translateY(0) scale(.98)}
+
+.refresh-glyph{
+  width:22px;height:22px;position:relative;display:inline-grid;place-items:center;flex:0 0 22px;
+}
+.refresh-ring{
+  position:absolute;inset:0;border-radius:50%;
+  background:conic-gradient(from 0deg,transparent 0 18%,#6d9cff 28%,#ed1c24 66%,transparent 78%);
+  opacity:0;
+  transform:scale(.86);
+  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 0);
+  mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 0);
+}
+.refresh-core{
+  width:18px;height:18px;display:grid;place-items:center;border-radius:50%;
+  color:#b7c5d8;font-size:15px;font-weight:800;line-height:1;
+  transition:color .2s ease,transform .25s ease,background .2s ease;
+}
+.refresh-label{font-size:9px;font-weight:900;letter-spacing:.02em;color:#d6dfeb}
+
+/* Loading state */
+.refresh-modern.loading{
+  border-color:rgba(91,143,249,.24)!important;
+  background:linear-gradient(180deg,rgba(91,143,249,.12),rgba(91,143,249,.035))!important;
+  box-shadow:0 0 0 3px rgba(91,143,249,.045),0 10px 28px rgba(0,0,0,.16)!important;
+}
+.refresh-modern.loading .refresh-ring{
+  opacity:1;
+  animation:refreshOrbit6033 .82s linear infinite;
+}
+.refresh-modern.loading .refresh-core{
+  color:#e9f1ff;
+  background:rgba(91,143,249,.08);
+  animation:refreshCore6033 1.05s ease-in-out infinite;
+}
+.refresh-modern.loading .refresh-label{color:#aecaFF}
+
+/* Success / error micro feedback */
+.refresh-modern.refresh-success{
+  border-color:rgba(34,197,94,.25)!important;
+  background:linear-gradient(180deg,rgba(34,197,94,.11),rgba(34,197,94,.03))!important;
+}
+.refresh-modern.refresh-success .refresh-core{
+  color:#70e6a1;
+  transform:scale(1.08);
+}
+.refresh-modern.refresh-error{
+  border-color:rgba(237,28,36,.28)!important;
+  background:linear-gradient(180deg,rgba(237,28,36,.10),rgba(237,28,36,.025))!important;
+  animation:refreshShake6033 .34s ease;
+}
+.refresh-modern.refresh-error .refresh-core{color:#ff9296}
+
+@keyframes refreshOrbit6033{to{transform:rotate(360deg) scale(.86)}}
+@keyframes refreshCore6033{
+  0%,100%{transform:scale(.92);opacity:.78}
+  50%{transform:scale(1.05);opacity:1}
+}
+@keyframes refreshShake6033{
+  0%,100%{transform:translateX(0)}
+  25%{transform:translateX(-2px)}
+  75%{transform:translateX(2px)}
+}
+
+/* Floating refresh feedback — shown on manual refresh, PC and phone. */
+.refresh-toast-6033{
+  position:fixed;
+  z-index:25000;
+  top:82px;
+  right:20px;
+  width:min(330px,calc(100vw - 28px));
+  min-height:72px;
+  padding:13px 14px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  border:1px solid rgba(255,255,255,.085);
+  border-radius:17px;
+  background:linear-gradient(145deg,rgba(14,28,46,.96),rgba(7,18,31,.97));
+  box-shadow:0 18px 52px rgba(0,0,0,.42);
+  backdrop-filter:blur(20px);
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateY(-10px) scale(.98);
+  transition:opacity .24s ease,transform .24s ease,visibility .24s ease;
+}
+.refresh-toast-6033.show{
+  opacity:1;visibility:visible;transform:translateY(0) scale(1);
+}
+.refresh-toast-icon-6033{
+  width:42px;height:42px;flex:0 0 42px;position:relative;display:grid;place-items:center;
+  border-radius:14px;background:rgba(91,143,249,.07);border:1px solid rgba(91,143,249,.11);
+}
+.refresh-toast-orbit-6033{
+  position:absolute;inset:7px;border-radius:50%;
+  background:conic-gradient(from 20deg,transparent 0 18%,#6d9cff 30%,#ed1c24 72%,transparent 82%);
+  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 0);
+  mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 0);
+  animation:refreshOrbit6033 .8s linear infinite;
+}
+.refresh-toast-core-6033{font-size:18px;color:#e8f0ff;font-weight:900}
+.refresh-toast-copy-6033{min-width:0;flex:1}
+.refresh-toast-copy-6033 strong{
+  display:block;color:#edf4fc;font-size:10px;font-weight:900;margin-bottom:3px;
+}
+.refresh-toast-copy-6033 > span{
+  display:block;color:#8397b0;font-size:8px;line-height:1.45;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.refresh-toast-progress-6033{
+  height:3px;margin-top:8px;border-radius:999px;background:rgba(255,255,255,.055);overflow:hidden;
+}
+.refresh-toast-progress-6033 span{
+  display:block;width:38%;height:100%;border-radius:999px;
+  background:linear-gradient(90deg,#5b8ff9,#ed1c24,#ffd100);
+  animation:refreshBar6033 1.05s ease-in-out infinite;
+}
+.refresh-toast-6033.success .refresh-toast-icon-6033{
+  background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.16);
+}
+.refresh-toast-6033.success .refresh-toast-orbit-6033{display:none}
+.refresh-toast-6033.success .refresh-toast-core-6033{font-size:0;color:#69e399}
+.refresh-toast-6033.success .refresh-toast-core-6033:after{content:"✓";font-size:21px}
+.refresh-toast-6033.success .refresh-toast-progress-6033 span{
+  width:100%;animation:none;background:#22c55e;
+}
+.refresh-toast-6033.error .refresh-toast-icon-6033{
+  background:rgba(237,28,36,.08);border-color:rgba(237,28,36,.17);
+}
+.refresh-toast-6033.error .refresh-toast-orbit-6033{display:none}
+.refresh-toast-6033.error .refresh-toast-core-6033{font-size:0;color:#ff8388}
+.refresh-toast-6033.error .refresh-toast-core-6033:after{content:"!";font-size:20px}
+.refresh-toast-6033.error .refresh-toast-progress-6033 span{
+  width:100%;animation:none;background:#ed1c24;
+}
+@keyframes refreshBar6033{
+  0%{transform:translateX(-125%)}
+  55%{transform:translateX(125%)}
+  100%{transform:translateX(265%)}
+}
+
+/* Mobile refresh: round app-style button + bottom floating feedback. */
+@media(max-width:900px){
+  .refresh-modern{
+    width:34px!important;
+    min-width:34px!important;
+    height:34px!important;
+    padding:0!important;
+    border-radius:11px!important;
+    display:inline-grid!important;
+    place-items:center!important;
+  }
+  .refresh-modern .refresh-label{display:none!important}
+  .refresh-modern .refresh-glyph{width:22px;height:22px}
+  .refresh-modern .refresh-core{font-size:16px}
+  .refresh-toast-6033{
+    top:auto;
+    right:12px;
+    left:12px;
+    bottom:calc(88px + env(safe-area-inset-bottom));
+    width:auto;
+    border-radius:18px;
+    min-height:68px;
+  }
+}
+
 </style>
 <!-- V5.9.3 Sidebar Navigation: input dipisahkan ke Input Center; growth & day-count fixed -->
 </head>
 <body>
+
+<div class="refresh-toast-6033" id="refreshToast6033" role="status" aria-live="polite">
+  <div class="refresh-toast-icon-6033" id="refreshToastIcon6033">
+    <span class="refresh-toast-orbit-6033"></span>
+    <span class="refresh-toast-core-6033">&#8635;</span>
+  </div>
+  <div class="refresh-toast-copy-6033">
+    <strong id="refreshToastTitle6033">Sinkronisasi data</strong>
+    <span id="refreshToastSub6033">Mengambil data terbaru dari Google Sheet...</span>
+    <div class="refresh-toast-progress-6033"><span></span></div>
+  </div>
+</div>
+
 
 <div class="app-loading-6032" id="appLoading6032" aria-live="polite">
   <div class="loading-card-6032">
@@ -1639,8 +1907,8 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
   <div class="topbar-left">
     <img class="topbar-logo" src="cc-logo.png" alt="Chicken Crush">
     <div class="topbar-brand">
-      <div class="topbar-title">Chicken Crush Indonesia <span class="v603-badge">V6.0.3.2</span></div>
-      <div class="topbar-sub" id="periodSubtitle">Performance Dashboard V6.0.3.2 &middot; Agustus 2026</div>
+      <div class="topbar-title">Chicken Crush Indonesia <span class="v603-badge">V6.0.3.3</span></div>
+      <div class="topbar-sub" id="periodSubtitle">Performance Dashboard V6.0.3.3 &middot; Agustus 2026</div>
     </div>
   </div>
   <div class="topbar-right">
@@ -1649,8 +1917,12 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
       <span class="status-dot local" id="statusDot"></span>
       <span id="statusText">Mode Lokal</span>
     </div>
-    <button class="btn-refresh" id="btnRefresh" onclick="refreshData()">
-      <span class="spin-icon" id="refreshIcon">&#8635;</span> Refresh
+    <button class="btn-refresh refresh-modern" id="btnRefresh" onclick="refreshData(true)" title="Sinkronkan data sekarang" aria-label="Sinkronkan data sekarang">
+      <span class="refresh-glyph" aria-hidden="true">
+        <span class="refresh-ring"></span>
+        <span class="refresh-core">&#8635;</span>
+      </span>
+      <span class="refresh-label">Refresh</span>
     </button>
     <span class="status-pill" title="Endpoint live tertanam di aplikasi">AUTO LIVE</span>
     <button class="btn-refresh" id="btnInstallPwa" onclick="installPwa60()" title="Pasang sebagai aplikasi">&#8681; Install App</button>
@@ -3322,13 +3594,17 @@ function fetchWithTimeout(url,ms,retries){
 }
 const CCI_API_URL_V601="https://script.google.com/macros/s/AKfycbz5ZRbzZL5xEXsicT5J9fiarT1dmcn2Plwb6trDM1nmBp3tWpCPXT7S9tOPH4nnARw/exec";
 function liveUrl601(){return CCI_API_URL_V601}
-function refreshData(){
+function refreshData(manual){
   var url=liveUrl601();
-  if(!url){updateStatus('local');setLiveError('');renderProfessionalStatus();return Promise.resolve(false)}
-  if(refreshInFlight)return refreshInFlight;
+  if(!url){updateStatus('local');setLiveError('');renderProfessionalStatus();finishRefresh6033('error',!!manual);return Promise.resolve(false)}
+  if(refreshInFlight){
+    if(manual)showRefreshToast6033('loading','Sinkronisasi sedang berjalan','Menunggu proses pembaruan yang sedang berlangsung...');
+    return refreshInFlight;
+  }
 
   var btn=document.getElementById('btnRefresh');
-  if(btn){btn.classList.add('loading');btn.disabled=true}
+  beginRefresh6033(!!manual);
+  if(btn)btn.disabled=true
 
   refreshInFlight=fetchWithTimeout(addMode582(url,'dashboardlite'),18000,2)
     .then(function(data){
@@ -3345,6 +3621,7 @@ function refreshData(){
       updateStatus('live',isNaN(ts)?new Date().toLocaleString('id-ID'):ts.toLocaleString('id-ID'));
       setLiveError('');
       scheduleNextRefresh();
+      finishRefresh6033('success',!!manual);
       return true;
     })
     .catch(function(err){
@@ -3357,11 +3634,12 @@ function refreshData(){
         'Dashboard tetap menampilkan snapshot terakhir dan akan mencoba kembali otomatis.');
       renderProfessionalStatus();
       scheduleNextRefresh();
+      finishRefresh6033('error',!!manual);
       return false;
     })
     .finally(function(){
       refreshInFlight=null;
-      if(btn){btn.classList.remove('loading');btn.disabled=false}
+      if(btn)btn.disabled=false;
     });
   return refreshInFlight;
 }
@@ -3433,11 +3711,11 @@ function saveUrl(){
   var url=document.getElementById('scriptUrl').value.trim();
   if(!url){alert('Masukkan URL Apps Script terlebih dahulu.');return}
   if(url.indexOf('script.google.com')<0&&!confirm('URL tidak terlihat seperti Google Apps Script Web App. Tetap simpan?'))return;
-  /* V6.0.3.2 uses fixed endpoint */
+  /* V6.0.3.3 uses fixed endpoint */
   hideModal();refreshData().then(function(){startAutoRefresh();refreshAnalytics(false)});
 }
 function disconnectUrl(){
-  /* V6.0.3.2 fixed endpoint cannot be disconnected */
+  /* V6.0.3.3 fixed endpoint cannot be disconnected */
   if(autoRefreshTimer)clearInterval(autoRefreshTimer);if(countdownTimer)clearInterval(countdownTimer);
   autoRefreshTimer=countdownTimer=null;appData.source='local';setLiveError('');renderSource();updateStatus('local');
   document.getElementById('scriptUrl').value='';renderConnectionDiagnostic(null);renderProfessionalStatus();hideModal();
@@ -3661,20 +3939,32 @@ function switchMainView(view){
   }
 }
 
+function syncSidebarButton6033(){
+  var collapsed=document.body.classList.contains('sidebar-collapsed');
+  var btn=document.getElementById('sidebarCollapseBtn');
+  if(!btn)return;
+  btn.setAttribute('aria-expanded',collapsed?'false':'true');
+  btn.setAttribute('aria-label',collapsed?'Besarkan navigasi':'Kecilkan navigasi');
+  btn.setAttribute('title',collapsed?'Besarkan navigasi':'Kecilkan navigasi');
+}
+
 function toggleSidebar(){
+  if(window.innerWidth<=900)return;
   document.body.classList.toggle('sidebar-collapsed');
   var collapsed=document.body.classList.contains('sidebar-collapsed');
-  try{localStorage.setItem('cci_sidebar_collapsed_v593',collapsed?'1':'0')}catch(e){}
-  var btn=document.getElementById('sidebarCollapseBtn');
-  if(btn)btn.setAttribute('aria-expanded',collapsed?'false':'true');
+  try{localStorage.setItem('cci_sidebar_collapsed_v6033',collapsed?'1':'0')}catch(e){}
+  syncSidebarButton6033();
 }
 
 function restoreSidebarState(){
   var collapsed=false;
-  try{collapsed=localStorage.getItem('cci_sidebar_collapsed_v593')==='1'}catch(e){}
-  document.body.classList.toggle('sidebar-collapsed',collapsed);
-  var btn=document.getElementById('sidebarCollapseBtn');
-  if(btn)btn.setAttribute('aria-expanded',collapsed?'false':'true');
+  try{
+    var v=localStorage.getItem('cci_sidebar_collapsed_v6033');
+    if(v===null)v=localStorage.getItem('cci_sidebar_collapsed_v593');
+    collapsed=v==='1';
+  }catch(e){}
+  document.body.classList.toggle('sidebar-collapsed',window.innerWidth>900&&collapsed);
+  syncSidebarButton6033();
 }
 
 
@@ -4161,7 +4451,68 @@ window.addEventListener('appinstalled',function(){
 });
 
 
-/* ========== APP LOADING + LIVE RESUME V6.0.3.2 ========== */
+
+/* ========== MODERN REFRESH V6.0.3.3 ========== */
+var refreshToastTimer6033=null;
+
+function showRefreshToast6033(state,title,sub){
+  var toast=document.getElementById('refreshToast6033');
+  if(!toast)return;
+  if(refreshToastTimer6033){clearTimeout(refreshToastTimer6033);refreshToastTimer6033=null}
+  toast.classList.remove('success','error');
+  if(state==='success')toast.classList.add('success');
+  if(state==='error')toast.classList.add('error');
+
+  var titleEl=document.getElementById('refreshToastTitle6033');
+  var subEl=document.getElementById('refreshToastSub6033');
+  if(titleEl)titleEl.textContent=title||'Sinkronisasi data';
+  if(subEl)subEl.textContent=sub||'Mengambil data terbaru...';
+  toast.classList.add('show');
+
+  if(state==='success'||state==='error'){
+    refreshToastTimer6033=setTimeout(function(){
+      toast.classList.remove('show');
+    },state==='success'?1500:2200);
+  }
+}
+
+function beginRefresh6033(manual){
+  var btn=document.getElementById('btnRefresh');
+  if(btn){
+    btn.classList.remove('refresh-success','refresh-error');
+    btn.classList.add('loading');
+  }
+  if(manual){
+    showRefreshToast6033(
+      'loading',
+      'Menyinkronkan data',
+      navigator.onLine===false
+        ? 'Perangkat sedang offline. Menunggu koneksi...'
+        : 'Mengambil data terbaru dari Google Sheet...'
+    );
+  }
+}
+
+function finishRefresh6033(result,manual){
+  var btn=document.getElementById('btnRefresh');
+  if(btn){
+    btn.classList.remove('loading','refresh-success','refresh-error');
+    btn.classList.add(result==='success'?'refresh-success':'refresh-error');
+    setTimeout(function(){
+      btn.classList.remove('refresh-success','refresh-error');
+    },1300);
+  }
+
+  if(manual){
+    if(result==='success'){
+      showRefreshToast6033('success','Data berhasil diperbarui','Dashboard sudah menggunakan data live terbaru.');
+    }else{
+      showRefreshToast6033('error','Sinkronisasi belum berhasil','Data terakhir tetap ditampilkan. Sistem akan mencoba lagi otomatis.');
+    }
+  }
+}
+
+/* ========== APP LOADING + LIVE RESUME V6.0.3.3 ========== */
 function loadingState6032(text){
   var el=document.getElementById('loadingState6032');
   if(el)el.textContent=text||'';
