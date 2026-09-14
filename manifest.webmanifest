@@ -1,7 +1,7 @@
 {
   "name": "Chicken Crush Team V6.0.3",
   "short_name": "CC Team",
-  "description": "Chicken Crush Performance Dashboard untuk tim",
+  "description": "Chicken Crush Performance Dashboard untuk tim · Mobile UI 6.0.3.1",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
