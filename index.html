@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" href="icon-192.png">
 
-<title>Chicken Crush Indonesia | Live Revenue Dashboard V6.0.1</title>
+<title>Chicken Crush Indonesia | Live Revenue Dashboard V6.0.2</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <style>
@@ -1031,7 +1031,7 @@ body{
 
 
 /* =========================================================
-   V6.0.1 - PUSAT FILTER / FIXED COLLAPSIBLE SIDEBAR
+   V6.0.2 - PUSAT FILTER / FIXED COLLAPSIBLE SIDEBAR
 ========================================================= */
 :root{
   --sidebar-w:218px;
@@ -1258,7 +1258,7 @@ body.sidebar-collapsed .main{
 }
 
 /* =========================================================
-   V6.0.1 - POS USAGE SLIDE
+   V6.0.2 - POS USAGE SLIDE
 ========================================================= */
 .pos-center{padding:8px 0 28px}
 .pos-hero{
@@ -1333,7 +1333,7 @@ body.sidebar-collapsed .main{
 }
 
 /* =========================================================
-   V6.0.1 - SALES MIX / MOBILE PWA
+   V6.0.2 - SALES MIX / MOBILE PWA
 ========================================================= */
 .mix-center{padding:8px 0 28px}
 .mix-hero{
@@ -1378,6 +1378,34 @@ body.sidebar-collapsed .main{
 @media(max-width:720px){.mix-hero{align-items:flex-start;flex-direction:column;padding:18px}.mix-hero-actions{width:100%;justify-content:space-between}.mix-kpi-grid{grid-template-columns:1fr 1fr}.mix-chart-shell{height:250px}#btnInstallPwa{display:none}}
 @media(max-width:430px){.mix-kpi-grid{grid-template-columns:1fr}}
 
+/* V6.0.2 Team Install Experience */
+@media(max-width:720px){
+  #btnInstallPwa{display:inline-flex!important}
+}
+.team-install-banner{
+  margin:12px 0 0;padding:12px 14px;border:1px solid rgba(75,141,248,.17);
+  border-radius:14px;background:linear-gradient(135deg,rgba(75,141,248,.08),rgba(237,28,36,.045));
+  display:flex;align-items:center;justify-content:space-between;gap:12px
+}
+.team-install-copy{display:flex;align-items:center;gap:10px;min-width:0}
+.team-install-logo{width:38px;height:38px;border-radius:50%;object-fit:cover;flex:0 0 auto}
+.team-install-title{font-size:10px;font-weight:900;color:#edf4fc}
+.team-install-sub{font-size:8px;color:#8094ae;margin-top:2px;line-height:1.45}
+.team-install-actions{display:flex;gap:7px;align-items:center}
+.team-install-btn{
+  height:34px;padding:0 11px;border:1px solid rgba(75,141,248,.20);border-radius:10px;
+  background:#15345a;color:#dceaff;font-size:9px;font-weight:900;cursor:pointer;white-space:nowrap
+}
+.team-install-close{
+  width:30px;height:30px;border:0;border-radius:9px;background:rgba(255,255,255,.04);
+  color:#7f92ab;font-size:14px;cursor:pointer
+}
+@media(max-width:620px){
+  .team-install-banner{align-items:flex-start}
+  .team-install-copy{align-items:flex-start}
+  .team-install-actions{flex-direction:column}
+}
+
 </style>
 <!-- V5.9.3 Sidebar Navigation: input dipisahkan ke Input Center; growth & day-count fixed -->
 </head>
@@ -1389,7 +1417,7 @@ body.sidebar-collapsed .main{
     <img class="topbar-logo" src="cc-logo.png" alt="Chicken Crush">
     <div class="topbar-brand">
       <div class="topbar-title">Chicken Crush Indonesia</div>
-      <div class="topbar-sub" id="periodSubtitle">Live Revenue Dashboard V6.0.1 &middot; Agustus 2026</div>
+      <div class="topbar-sub" id="periodSubtitle">Live Revenue Dashboard V6.0.2 &middot; Agustus 2026</div>
     </div>
   </div>
   <div class="topbar-right">
@@ -1403,6 +1431,22 @@ body.sidebar-collapsed .main{
     </button>
     <span class="status-pill" title="Endpoint live tertanam di aplikasi">AUTO LIVE</span>
     <button class="btn-refresh" id="btnInstallPwa" onclick="installPwa60()" title="Pasang sebagai aplikasi">&#8681; Install App</button>
+  </div>
+</div>
+
+<div class="main" id="installBannerHost602" style="padding-top:0;padding-bottom:0">
+  <div class="team-install-banner" id="teamInstallBanner602">
+    <div class="team-install-copy">
+      <img class="team-install-logo" src="cc-logo.png" alt="CC">
+      <div>
+        <div class="team-install-title">Install Chicken Crush Dashboard</div>
+        <div class="team-install-sub">Pasang ke Home Screen agar dashboard terasa seperti aplikasi dan tetap Auto Live.</div>
+      </div>
+    </div>
+    <div class="team-install-actions">
+      <button class="team-install-btn" type="button" onclick="installPwa60()">Install Aplikasi</button>
+      <button class="team-install-close" type="button" onclick="dismissInstall602()" aria-label="Tutup">×</button>
+    </div>
   </div>
 </div>
 
@@ -3159,11 +3203,11 @@ function saveUrl(){
   var url=document.getElementById('scriptUrl').value.trim();
   if(!url){alert('Masukkan URL Apps Script terlebih dahulu.');return}
   if(url.indexOf('script.google.com')<0&&!confirm('URL tidak terlihat seperti Google Apps Script Web App. Tetap simpan?'))return;
-  /* V6.0.1 uses fixed endpoint */
+  /* V6.0.2 uses fixed endpoint */
   hideModal();refreshData().then(function(){startAutoRefresh();refreshAnalytics(false)});
 }
 function disconnectUrl(){
-  /* V6.0.1 fixed endpoint cannot be disconnected */
+  /* V6.0.2 fixed endpoint cannot be disconnected */
   if(autoRefreshTimer)clearInterval(autoRefreshTimer);if(countdownTimer)clearInterval(countdownTimer);
   autoRefreshTimer=countdownTimer=null;appData.source='local';setLiveError('');renderSource();updateStatus('local');
   document.getElementById('scriptUrl').value='';renderConnectionDiagnostic(null);renderProfessionalStatus();hideModal();
@@ -3182,7 +3226,7 @@ window.addEventListener('offline',function(){
 
 
 
-/* ========== POS USAGE V6.0.1 ========== */
+/* ========== POS USAGE V6.0.2 ========== */
 var POS_ESB_MAPPING_599={
   PUSAT:['CCS','SCH','Godean','Tamsis'],
   KALIMANTAN:['Martapura','Banjarmasin','Banjarbaru 2'],
@@ -3544,7 +3588,7 @@ function validateLivePayload(data){
   if(meta.connectorVersion!=='CCI-LIVE-V5.6'){
     return {
       ok:false,
-      message:'Dashboard mendeteksi connector lama. Gunakan Code.gs V6.0.1 lalu update deployment Web App.',
+      message:'Dashboard mendeteksi connector lama. Gunakan Code.gs V6.0.2 lalu update deployment Web App.',
       meta:meta
     };
   }
@@ -3837,7 +3881,7 @@ function downloadRankingCSV(){
 
 
 
-/* ========== PWA V6.0.1 ========== */
+/* ========== PWA V6.0.2 ========== */
 var deferredPwaPrompt60=null;
 window.addEventListener('beforeinstallprompt',function(e){
   e.preventDefault();
@@ -3862,6 +3906,25 @@ async function installPwa60(){
 if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)){
   window.addEventListener('load',function(){navigator.serviceWorker.register('./service-worker.js').catch(function(){})});
 }
+
+
+function dismissInstall602(){
+  var b=document.getElementById('teamInstallBanner602');
+  if(b)b.style.display='none';
+  try{sessionStorage.setItem('cci_install_banner_dismissed_v602','1')}catch(e){}
+}
+function syncInstallBanner602(){
+  var b=document.getElementById('teamInstallBanner602');
+  if(!b)return;
+  var dismissed=false;
+  try{dismissed=sessionStorage.getItem('cci_install_banner_dismissed_v602')==='1'}catch(e){}
+  b.style.display=(isStandalone60()||dismissed)?'none':'flex';
+}
+window.addEventListener('load',syncInstallBanner602);
+window.addEventListener('appinstalled',function(){
+  var b=document.getElementById('teamInstallBanner602');
+  if(b)b.style.display='none';
+});
 
 /* ========== INIT ========== */
 (function(){

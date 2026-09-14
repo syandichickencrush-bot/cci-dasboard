@@ -1,7 +1,7 @@
 {
-  "name": "Chicken Crush Dashboard",
-  "short_name": "CC Dashboard",
-  "description": "Chicken Crush Live Dashboard untuk tim",
+  "name": "Chicken Crush Dashboard Team",
+  "short_name": "CC Team",
+  "description": "Chicken Crush Live Dashboard untuk tim - Auto Live",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -21,5 +21,6 @@
       "type": "image/png",
       "purpose": "any maskable"
     }
-  ]
+  ],
+  "id": "./"
 }
