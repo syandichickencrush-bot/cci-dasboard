@@ -1,12 +1,12 @@
 {
-  "name": "Chicken Crush Dashboard Team",
+  "name": "Chicken Crush Team V6.0.3",
   "short_name": "CC Team",
-  "description": "Chicken Crush Live Dashboard untuk tim - Auto Live",
+  "description": "Chicken Crush Performance Dashboard untuk tim",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#07111f",
-  "theme_color": "#07111f",
+  "background_color": "#070b12",
+  "theme_color": "#070b12",
   "orientation": "any",
   "icons": [
     {
