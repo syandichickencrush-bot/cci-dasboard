@@ -1,7 +1,7 @@
 {
-  "name": "Chicken Crush Indonesia Dashboard",
-  "short_name": "CCI Dashboard",
-  "description": "Live Revenue Dashboard Chicken Crush Indonesia",
+  "name": "Chicken Crush Dashboard",
+  "short_name": "CC Dashboard",
+  "description": "Chicken Crush Live Dashboard untuk tim",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

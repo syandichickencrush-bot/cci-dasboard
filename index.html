@@ -9,9 +9,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="CCI Dashboard">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icon-192.png">
 
-<title>Chicken Crush Indonesia | Live Revenue Dashboard V6.0</title>
+<title>Chicken Crush Indonesia | Live Revenue Dashboard V6.0.1</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <style>
@@ -1030,7 +1031,7 @@ body{
 
 
 /* =========================================================
-   V6.0 - PUSAT FILTER / FIXED COLLAPSIBLE SIDEBAR
+   V6.0.1 - PUSAT FILTER / FIXED COLLAPSIBLE SIDEBAR
 ========================================================= */
 :root{
   --sidebar-w:218px;
@@ -1257,7 +1258,7 @@ body.sidebar-collapsed .main{
 }
 
 /* =========================================================
-   V6.0 - POS USAGE SLIDE
+   V6.0.1 - POS USAGE SLIDE
 ========================================================= */
 .pos-center{padding:8px 0 28px}
 .pos-hero{
@@ -1332,7 +1333,7 @@ body.sidebar-collapsed .main{
 }
 
 /* =========================================================
-   V6.0 - SALES MIX / MOBILE PWA
+   V6.0.1 - SALES MIX / MOBILE PWA
 ========================================================= */
 .mix-center{padding:8px 0 28px}
 .mix-hero{
@@ -1385,10 +1386,10 @@ body.sidebar-collapsed .main{
 <!-- ==================== TOP BAR ==================== -->
 <div class="topbar">
   <div class="topbar-left">
-    <img class="topbar-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAIAAAC2BqGFAAABAGlDQ1BpY2MAABiVY2BgPMEABCwGDAy5eSVFQe5OChGRUQrsDxgYgRAMEpOLCxhwA6Cqb9cgai/r4lGHC3CmpBYnA+kPQKxSBLQcaKQIkC2SDmFrgNhJELYNiF1eUlACZAeA2EUhQc5AdgqQrZGOxE5CYicXFIHU9wDZNrk5pckIdzPwpOaFBgNpDiCWYShmCGJwZ3AC+R+iJH8RA4PFVwYG5gkIsaSZDAzbWxkYJG4hxFQWMDDwtzAwbDuPEEOESUFiUSJYiAWImdLSGBg+LWdg4I1kYBC+wMDAFQ0LCBxuUwC7zZ0hHwjTGXIYUoEingx5DMkMekCWEYMBgyGDGQCm1j8/yRb+6wAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAAB3RJTUUH6ggdEh06z8qUdwAAAT16VFh0UmF3IHByb2ZpbGUgdHlwZSBpY2MAACiRnVPZrcQgDPynii3B+CTlJCRIr/8GnrmibJT92B2JIDlmxh5M+Ms5vCpYNEBFzAkmmNqmux7GhoJsjAiSZJEVAexoJ8Y6ETQqGRn8iEZWXDVcmXfC/VfG8GX+oqxipL1/KCOMHNyF1n0vNPKomNWucUxn/C2f8owHM7cUrBNEgfnDBdiN7spRhwAmF3iMB/10wC/AcAqkoUzZfc0ms7UTcXqUVfQQkZkwW3EC85j4vXvhwHiOwQVaVmxElErviRZ4TMRlqftmSXqB+3rPC93z7h2U1FrZNJcnwjovcBsXA42GGq/XP/wBVEc7iGuf1F1aRZHGmK2y3Tzyyf5g3thv3s0Kq3fVMy1jmVekHlTpSezK6o+pEuPRY+SfykNOThr+AYhevmcDKBYKAAAmM0lEQVR42u19e7RdVXX3b8619nnccx+5uSEJhEBISBDRgjS8g0ADCBRB5VHbgTCE+mir+Emrra2ln9LWr3UMFFr7faJIUYGWVxWsiUaEiPIIDMQ6QJ7hERLyvu97zzl7rTm/P9ba55x7c3LvuclNAGGNO0Zuzj1777V+e6655przN+ciVcXebOF5RKSqqvACJhiD0A0iqVTcK+urz6x1Tz8rz7/gXl6vGzf5bb1+YJBHRrlSJS+AqmHJ56WtyJ0dtqeb5s6xB+zPixbYQxYnSxYm++/P+VztnvAeojBMREoEVQqf78VGewPo7BkEKABViICZmFUVRL6vv/qrJ8oPrnFrHnNPPSMvb9DhXqBKAAGAAQzBANkHQLgTQRVe4QGv4SPkqNTN8/ezhy6xRx9ZOO7o3OGHmRldUCUiFQmPBjGh3qu9APreAFrDIAO+ULAhQIgqz71QXXXv6IpV7sFHdOsGYJRgCDlCDmTAPOY9hZmQ/QKCBtCJxiAlAvWKqqKq8ECRZu1njzuqeOap+dNPyS1ayOFu4gECc5hbb2iga2IcxM7HURFVN24aufO/y7d/L31gDSpbGEwognMwDAVEal0iBUgVINDOekmAQgmAkmZwEQUQAS+QqmBUIcjPSo4/pnD++9o+cHZu7mxVjXPLmNjJ7K29oYBWRZDiADEzREYeeHj46zdW716p/S8zLKEEmwAR3DFKIaoFEBpHrpnqqPWZGv6mtffR+KUIOgCXKoYFnrrm5957Ruljl7SdcAyIEfSJMRTg3jNYTzPQYZLXpFiJ2BhfTYfvWjF89b+5B+8nlBkdsDlA1UsjfHtifDrmXyLDAMFVBIOKoj1uWemKPy2dc5bJJeKFVGE4k+5pFu5pBVpjB9ULoGSMODd4x91D/3C1/PohBhN3gBneB629B4BtqY9EBGMgojIoEPPOY0p/c0XHeeewtep9eB863ZbJtAEd7Ieojo0B0fBPVg987ir36GoDw6ZToSoS5mZQvntGiCfpZlTloRvMBBI/4OHs0pM6v3Rl6dSTGoeA6ROI6QC6LsheVcnaytoX+z/zd5U7bzVQMp0Khfd733RtqecEsCGQ+gEPyn/gwq4vfyG/cIE6R0RkzHSJ9u4CXTfdvCdjRKTv2uuGrrzKDG1m062AitTsp9dEhifqfGYvKoHYEOB9r7TP7vji5zsv/5hhVu/DIrn7um53gNaoBkQgQtaWn35u+0c+5e9fYbgLnKj3cV18neE7fhjBRgwmjjGQ1EufOfHMmd+4tnDIwepcbW9Fu7Fm865dVtMX6gWqsLb/hu9uWbpM719l7D4KA+eobqK9rhtFrJUAOKcwxs7W+3+yeekJ/Td8F9ZCVb2EnU2DZTm1tgtAq2ayDOfJsFSrWy+7vP/SS+xImcwMdSmphLe/BzcA09pqWjjqQZeSmZGMVPovvWTLZZdLtUqG1fmAtaruAtxTVh1hBqlCnDeJrby0btsFl/hH7jXJPuqFRN4AymLiAdYUNzMZ9ukWc9QpPbfdmD9wvk8dW5Nta6Y2wikBHVZgBQDnKEmGH3p0+3l/xBtepKRbnaNoO71hMW4cKpTCYKzVtFf3W9B9x82lY5dqmsLaAB1NxUKdguqo7U7VOUqSwbtWblt+htmwnmy3pinhtwdlBO9KMLjTlGw3bVi/bfkZg3etpCRR54Cad6TV1iLQUe5VFc5zkvR/97be95+fjKZqSnBp9KD9tqAcGkXVTepSmFIymva+//z+797GSQLnG1yKLeHdEtBjZdn23XBL/4c+ZJEo5eDd624bMt2NiOCdUs4i6f/QxX033EyJnapcT66jFUoKBeA8Jbb/u7f2f+iShAsCA5E3iFkxDU1VwcyQVEa7vnNj10UXaupgTWZbT4LDpEBHS86nziR28K4Vve+/0KpVenOhXMeCmdQ7ct133tpx7pkBlla26ZMAHV1FzpG1Qw88sv20s5KRqnJOxb/ZUK4BQmxIqmlbMnPVD9uPP1qdI2sn3aNPCHRw3nshw5UXXt584qlm/Xo1JXj35kQ5Q0XJWPXDOm+/fe7/Sf6gAwNEEwcNeIL7xRAJkx8tb/vDD/P6F2Db3+QoI/opHdl2Wv/Stj/8sB8tg6nuJd5J2ynQGvSGCBFtu/wz8vBPKZmpmSX3Jm/B5qOk2z9877bLP0NEIRo3gRZurjqi89M5srbv+m8P/PGl1s7U4FN+q2VNATLGue2d3/zWjMsunlhZNwVaFRT8y6NPPL31+JPsQFnYkuhv095vN1vcozOxONdZmPXA6uJhh0T/dTNfz3jVEWFXVSIR9H7y0zywXW2ORN5CubHFPbqI2hwPbO/9xKdFoJma3lF6d9TRiiDOzH1f+Rd/70qy3eociN5CeVwjEKKC7fb3/aj/K/9CzPC+Rska8+VxqiPQSoi5/Mxzm496tx0YUbIEfUN7Pvdc0xjcYFLvOouzH7m/sGSRigSqUOM3ueEaRd11hP7Pf9EMbIbNkUpGxnqrjW8UWCwqsAkPbO7//BfqikNVG+S6LtGZpeHJmqGV92w/8+yE20XlLYRbaQowcSpDM1f8oP2M5ep9jKBncj1WR6vCsBcZ+OI/Gmi29u1FXm+QAY3xsr366DpiQM352aJrLiyABAPt/+I/+kBYHXvtGKDVeyIauuUO9+DP2HSqeCAjbe6NAaqSAlCGMivRXnp0vQuqSlrrRjBzW3jZQW5VPJtO/+DPhm65I7BcGr/DaFQm1njnh6++1sBKxhncg2OtKS0gEllMQswkniRl5sgY2XMPr1PzVKHEIKtEREpQEIO4IXq385bF0SFQAzN89TXe+RjxisHcmkQTgl0yfMdd/rGH2bRDPPYYytFYD/F7Y8kYUlE/IG6z94PS0SkzepwfgFaJWPcA2NHJTqpQsBKDlNSTOHiBtKt2wnsKsqoKbQFrgBCE+rE1w3d8HwC8ryEYMhziW1OiTe9+j9x/H5lOeJnm/Ung1dY83MygQOwcVgDF2ebIw4snnZAsOzb/O+/QQm505T2D/+uzvHUbOAeRaSCc1tjWIe7KAAgeEv5S0OSdPnesyx3lk7d5yqN8bzLwhTz1cosTO97eWPUDfOK75/zsx1QjemepJAoRMmZ49c+3n/wew8VGtvL04YzIrIpMziFBSh3z7Ckntr3/9/OnLEsOnM+Zva4iZMzgilV9Z51nKKfYbQsz0iQAUjKAJ1EA4HaxJ/ji6Wn+WJ8s9FQU9UAF8KB9aPjWfO/FBSaOXPcW4SbyUp5538rSScvUezATkc2msQIYvv47hDK4BO+mSW3U2ZtEDGvIp+L6lNvssSeVLvlg6dyz7L5zagkm6gVEygSCOlc687TBI47Qxx8h064iu/Z4ZAkDBIUFPMSRsube5Yrnu+JpVXuQkFEtQ8vQkXqijG7Q4vLqwNvz8iTIAK0augo2JKND13+ndNKyzKZGUNhK1lbWv1r5wY8MOrJN5LTAHKWIrIVPxW3X4j758z5a+sSlbUf/LoE0rA2qGhIvYlgoBCk9A/aod1Uf/wXtknM2+n0CD8IQBOKAohTOcqWLK/mjUmpTjEAHoAowiACTTSkAAi5KcrgffTI4ilpUpQTvGR3VH/yosv7V/Lx9w0aRgZDDg5Hv/xC962BzYaHYPXxrvymMISZx23whV/iTP5/964dmf+f/th29FAoNWWnMkYycsZYbh5M7/phg5E29R3EqkVEiEq9SkOLF1X1+PNzzzcHicVVUVLdBKwADFhTIdwRqTP0i5I50U3oqhZXT5tC7buSuHwKACEgZAJgFqNz5PYaN25TdQzqseAqQTdQPexlNPnjprF890PNvX84tXKDex8CutTS+Nd6FARSOPALUCefGvsAW3nXA2UA9edX8uensHw31XDOcW5zqdsgQiEAmIrsjK4UAMFBF7h2eoHAtz6jg41Rl2Mod3xcAzFCwqhJz5Znnqj9fQ2jLVOFuLzxsiOHdZnrHEd0//dGcW75RPHghnAurLpij6ppAJTApYBcfxAvmA9Vg3bayewCgSmBlVvHEh7qZt4zOumE4WeJku+ooyII4WFk7fX6Qbq3CLlTePzBnW0UaYTFHW/rzNZVnnguUXw56o3LPaqpsjTlSu9U0xi5l1Eu59FdfnP3IT9tPXqbOqyhZG/ammfg27buiZmN4Z4pFe8ThgnI97XDnCMcNvCoZVSGnaPuz8pyVw22nlrU3g7iW7TWBxo2ZjNAUpsfbw/yuGD02QWVL5Z7VACASlgCMrlzFcfOyG0qjri56dd687lU/mvmlvzVJot7DcIxgYjLZyHyIIFKvBHBXB2XQT2B1BuNYQWRJPNG+fubNozP/cZTgtR9kAQ77v8llUxu2emBwZwb8VLAAwODRlavCWCwZ43r7/EOPMooQ2XWlEW1kK24Ln/ieWf95Q37fuZKmZO2EqQk77LpUIQoVBTiXuKGh6s8eIBQhMkGGUUb+VDLwjuzRbtbXR5IDnd9CZEE2ui2aXFuzkDXDN/tRBZXg+0z1IUsApmZeEkQIRf/Qo663z3bPYADV/3lCN28A53Z9r5vtRLzbknzw0jmr7srvO1edY2tRsyWaX4dIWReB89BghDCspSRx5cr2T3xG1z4JU4QKsDMxiMmcbEgc8udW59wxZOc66QUnilqW5k5QpoCyAg5QUB7UBe4BdZMfsr1/UZB1TKZVR14jJOCcbt5Q/Z8nAFgA5YfWAKPgdhrrcGrpdnFGB5S35j9y+azrvkpe1PsYEm5GMh2jQ0KSiDFgVSK3aXPl8V9XHv2lf/Lp9BcP6UtPM3eq9xMyvwmkMPAOhT+q9Hx1FOWokXcqyDXmpkI9wOA2IA8dhXvFVJ5K0l+xf5arj1pdz8yqUyRmxWWbGTI6+tCatpNOsADSNb8kmKlCXL+jKtnEuy35D398n+u+igAK1xLHxs/2GGEQhXcwhqwV1coTvxm5e2VlxU/d4/+Dgc1AhUCEIpsulUloDqpKFt6heGG155pRHVEIyGQe3iavuUaOBeVAXdBRLj9uyz+15fusPMF+KPhBwAgOvLp/bkrIACAYt+aXClhXrfjfPEPIYdf2uKpkrbhtydkXzPrm1xDCZTGHaTy+QJYqEqTYWjc4NHzb94dv+K5/cA35XoK1KCq3E3coAJGYpbNzCyGgLI5yp6UzrxmJKDfjZ0W/aCPEM+BeNSO3JCO35dxjBh4EBsQwEOxPgQoR7SrHXoSQ8795xlcr1q1b79dtMIgKeko3U1UyRt0gHfauWd++jpnUa8zv3WGmBb5lSJ4la93A4OD/u2H4X67TV37DsIbaYWdBVVSgAhfEHkTRWbHzDkAd8SGu519HSER9Jss7oBz9HQIAPBNuox38Wm7kRiuvWgaYAKtQgUBV4WtFKnbM/W8NHAR7PufXbXDr1tv0mbUY6gXlpohy8FIRvJNCqeeG62x3V4g3NpXlkO8R1DGM6b/p1sHPXaXrnjBUgu2BqoqQ80ohpy7GLCZyjQY7gwgeUtBZ15bNTK8DmV4eh7JmpqEDtQFMA/+eH/xyXjYwg4xRACogF8uAjL16NxM5DYZ602fW2vTpZwlVcAFZonaLNwhKw7u+9i9+pe2od2maUpI0keUa+895JDZ9ZcP2j366uuL2hIpq91HxcD7qhtq62Yr8BHPMqPfo+GyleGwqW0BJc5Tj7RxoBtK1Sd9fFCurDRMZA6iqR9z801Q2gJN2MLxfZvhq+vSzVp5/gRp63vJjgtIYMMee0nnFn6kIrFVtsu4FlMV5Tuzgqvt6L7rMbH4psT0qApcGl/jUjXcFiIyqJ7vUdXysLL0K22TBqr1l9eAeDP+g0Ht5gbazNaoR4kZopzfOET1GBOjzL7J/eX32lFZx1rCeq3qYrqv+xoTSU0TUTB4IgPec2L4bbuo942y7eRPZHvFOVTLh3xWUFQohgXZ9tmryAonuNxr/RUABAc2k/m8Ut3+owNuJrIoQBJl1vWcqoWS+OQLcy6+wbtwEGLS+VwmhVGaV/uTs3y+eekoIIoybtLGQDpE4R9b2X/+dgUsvtZSDKapLCURKu+giDNE+JlXkT0+Lp1RkIDMzxoIcf/HgbgxcVxj4TMEQg6FuWgtETNDTCJfRjZvYbeslmCls5oMUKDySjk9+PETRm/eZCM6ztYMrVvV/5OMJl1RNYDTEp+3SQKOzXCGQ9suq4XXt6MGIW2oHmoGhu/IDf1mwDIWqBEtmb9C8s8iOcdt6WQYHCVPbYBKzypD53aOKp54cXPtNzXkVIWuq6zb0X/Zxq6xksNuZL9HWYKggOVwLJ6Q6BPB4/3mcsQIqwq1N+v68aMJXJGq4PQ9y1g1VgpHBQebhEa0Tklpx9yqIBJXi+e+LFS2A8dn1GfkMQO/n/pZefRFJW5Dl3QzdZB46CFB4b8rtcUHDjuIcVpIc9f1DHlsZNsjy3mTkZLQVEA+PMFeqaKgiNznKIDgHdBXOWB4Qbv4EETJm5BcPV276T+buUNBlN+k49ZfkiEgK73YhELXjbIwRvw6M/CxX/l7CjKk6K6aj1XYBxJWUKZTqajH9E0RMirJ525LcYYcqQNyEyl6L8Q198wbGqDJPS+GO6AglUigfDLvEazkT52b9V0PDNycEAutrVv4mjNvLlOp1hE06A1V7+GE2SeCbhh5UFWRN2tdf/fF9jJKKZHvp6WgMBSWHie3w8BnCO5qVObj1prractj1vda8Y1bDTTvatIXJIBDz9rcBgCgiZ2BsUwGQ/uZp3bAenFB0401jt9UuTmHqMafxTUB5pE+zbAH4tSCl1iEjQGGYJZ9D3IBMOrqaYchmwQH1ITZxqCsA9+JLQBlspmuYsSamAoDdT2oVH3fsJxSwkHUM8Pjaj3uv1cm/kk9YSm1UF4wJpS46cUGwdvas7KOdXpIODmXxn0k5gi01ih5mVRB1h61ds/Flr19Hwrh2IeI3LY2yf1RKbcwdHQrfkv2uNdCIc7lJe590dFAM+E7TKENQL9BiIh+vCQOFst5SW81sbYmoMO0teobhuaODbU+3wk+B2R9oC8F83tkVRADswgMVBXjBhNHrXRuCugmXNwIceL5Q9mJapJRPb8vivd72dDPNnQP4KZjyRIBzm7aEWzX3kTADyB12KB94gGolOCGnbZSBO9Y7oZgytILkUI+5kmkYnfa33VJPiQBPc+ewOWBe/Dirf7Lz66KyI4h/8mk0xDd3eACpc7a9PXf+uYohZIUnpwdrAoH8Wq6R6LXJV6AVJPtJ4SzngcgznzYDs6WmtbrWgD1gf+ZFB2X8+0kYd5H5Kkqw6ZpHBQDTjryMKD7MCnR9+nLMOQjpMIzFLnGuG28d63apElB93GiFwc26HQbI0FHt/FiVZgocwdR4G1N9/i6+nhrdRwFatICTQxZrLTI7SWkP0hqrbM0v05dfYWN2VB3BNiAmeJ+bN7fr619zEJYKbFIjbbXklQ0iEfJrtJ4gpQICqo+Z6suGcoCgSQ8AYugoksVp15fKHgJlspoRY7SJfDTvAWl0nLR0wdiLM74KcskhizlZshDt3dCQgDXJO4o8Q5vD4PrRu1dkNxr/vViCzxh1vv3cM2f8x80un6jbTmxhjYIa/ao6RmrqLyCjHhEMKWdb77AEGugglX9qqS045JpJk4IstBftF1S7rq16K+qImIiDrEUWdnx6/an1XmmsyKZEIIq6Z8rirR7t3cmShWznzzPz91NUWyJ7h7CeKiM3/O83+UANRTMBDdPUMpzr/IP3zVqzmk883fk+db2snplhTSDkxeynaIYxQqV4Y8haGEMq8CMkFWLOUtoJUAaN3JKTYQ4uXm2upwEL7ZPOi0Zm3TXCv+u8h3hAiZhgNDxNA1Up3CZIMCkxyCgxoKRCwb+qpK37kymWIKya+fvZ+fPY5vLm0CWK6uR0zeyVqwiZdnn0gZHbvx9OOaEdiq+EtCAoyFr1vviOt8+5967uu+82Z77fl9qd75d0q7p+9SMkFUhK6kk9JCWpqB9W1+vTrc73SrFAhx6B/Rd4P0CQmHQjRKz+cR5ZkePOYDSNR6BGeSED6UXhXZU5dw11f2PEnuy0KN7DOxJPKkRCGgRXiZQgpELiyTvyHlIQs9jRbAnJU1PLyGNWVM2hS0wuT6q6/Z++MvxXVxi7D1qghMU0czbww3jn78x5+F5TKMSx7TAl6qSZQF8iUqL0lQ2jP38ofXCNf+oZeeVV19fHI2VNHQiwFsWC6ZlJB8yzhx2aO/rI/NIjkvnz1bmBf7956FN/YSpeiUPEWoXobW7OimFmX49j7RgCB4gy3lcn1FH6vKk8atPH2D1nZCP7AcIoAtWcrGoRZobwPDGLNfcun3unT/Z14njo5vzQ3+fYcYtkGgUCGbHt/1zd85efJlUdWf2LbSefZritRQ5NDBxY69224uf/96yr/lbTFEmysxM2GqrSCwiN5wip935khEbL4jwAtkYLBdNeYmZkBZvDhWTN9i99ZfivP2tst3pPqmTIe7R9ujLzC8OyGUiiFDR1vUSRF4BABVABSkAFOsIywlpW9QBABlQAl5TaBDlAgAq0SgSlOej9y9LwNXk2Oqk7MCMek5eRnvtWtZ10Aqmq6+3b+LalvHlzIJS2aIQpwIBD2r3y++2nnyJpyk15HXWLMtudxZNvAGIwNZJ6xxyNIwpCOL0lAF1+6tkt7zzeOJ8tjEqAJ/TcMlI8vSLbwEmdINpMODKFopkPhkGM2pFFhCz/3EN9hhbHCcFtKD+Z27q8xFnZ0glkMtCLIFWZPXvuU4/a7hms3tvuGebYpYpRcKsuxVBzQoiMSu8ll5Wffp5DddRa4mJDo5ABVKP4h0MjjAFHcANTKbDF4rVxtYxJRDAMwMzfj+btm6VZxBlshHo/UUifTEwXNEUtpWtco8wBRgE7kyUIKdRBq9AKpAKtQh1UQQxYwAJhtTQQB7Ov0FwJI5hsBxZ2EqPm2KW2e4Z6HwNBxTNOE0wheyUUXyERmDbe+OrW955ffmk9WatpSnXZaHZhYKzUCRUEEDETB9uLM+mqh8opywqxpZJdtFBRDXdRUhWCUWwxWz/UVn3J0gxomo1AJ+h6PUAd+8IY168ab7rmmIWDmaFmvoaoaRZmn6gJpHjGqQCgysHYyC8/SfOz4NJWUK7JCEIFONNBz/5my++dUX7iKU4ScSlEm4p2XbhQHxhR48fZh4jUvnrgVYQAe+hihYuEgaBmPJFRXctbzytVf52YWVAXdbFObPbSuLHUFUg92Jv9RjGm7pNFXuvctQnv7lLkZ+WXnwwAsYKASH7JwbllRytGshhgy9ZixLqT1z6/ZdnywTv/m5IEgZgb3sR0ZMzXRpW8/RAdI7E1rIGXeOv72gZvLXAPUQJ18cLdf37Nn0MEs6QW295ZC/sBVowky47JLzlYRYiIgZAzhPwH3idRWKbg6NI61iUzMNh33nlbPnqF6+sna6EK54LabWyt767i17MjEAHw4kWKHKQx0hqxhgENmL6PFrf+WZvrs9wDYqjLNt3ZBnCK2+iGSwhwSBaHjMfA2mkaEqaMkeHy553LCAmdYCCe2dV27lnong9XbRoF3OnbrmPtgZwxHdVvXLPpHcf2fe16X66QtSCCaMhDzr7fKtbUGJF0HoD2DxL8jvM2GAZKag2Vb8ptWV4a+NeiVA33gPKAAD5jeuhkKqVRhuI+EQrAAQY6bOqTqelVQa+4Krrnt51zFhASOoNEE6lz+Xn75s9+j2AwYx5NHWsRFc9mFm/cMPCJj256x/Hb/+mr6SsbYBjGBKWkXuC8eqfeq5dgbIz/8V69V+fUOaQ+5JhSLlFg5Ppvm1qkZ1wXiCgcC2mAzdz/+cKm32vv/6dS+pKlDvBMUDEjonvAQT0C5z3+6Nj/Zt+pkZmpG5Ly0LeTcbq9yQsyRjCYO/s9+Xn7BksMwLSVkaifPhDOeyCGH/YYRWmuPfnEtnPOzJ14fO7gg0ySZGeLtCBQ2WbHlcvu2bUDV305ve1m5k6Eaoc7GMyKrBgXI3LUodSmyXG+eJpLjnLJQuFOIaOqIA/1oEzS4wwK9gYDBsqRO6kpSR+7583gNbnKyoSZVHe6OVQ0LyMxnYVRatuSABCFYwxdVTEsENhuXrQoOfww+/ZD7KKFZv48u08POkpUKLI1AFREqinKZQwNu+19smWLX7/Rv/Bi+uzz7sln9eW1LKPMnRoqdzZFuo6YRluYAQcFCZSM8gLNHertYm8WCM+F7fHUTpRTsjFjRVJGRWUYvs/INuhGcutM+gL7Z41sCCxaaPQXNnn05IVRQslXWDv4n//V/8E/sKZLxO8G6aQxRheY9eHQnrKiAqiCgRyooMUi5wvIgNY0pUqFKhVFRZEyPKAEC+SJ8ghUv8xQn8zk18ihIBCHcuP1lS2wAJhUC0R5jV8IQFcV1VqCRZ13Gsxt9Uo7Z5IrlNk639f1H//R8QcfQENZ2JpEh7US4mTTMSfrY4/CtJPIpKOZRL6zMhcR8uAUDX+VsBEXxMTh+O4BBhhM4AbuYjjCM/osWs6RanA1xQop4fYghFkhmv0VDSKqyKwEZBThWuJ0bco2EefoaxukI5fOeXg121jRLmTkMNBQIsN5Y03piss9HDck7e5SG5OPEglyonBOvVMvYR4pGeWEOKfxxypxCFurF/Ue4aexiH4r2wXUhDDbB4VtkEA9qVcVhNNXlQBWYiVWsGr0mKqqqig8wZFK4IDGPfxOUA7OH/LwpSs+ZayJpS+yTe7YSo7B36K6adlp+uAvyHTEc4+nj35SS/RrTMFukPnaQb3I7NTprvFbOyxYG/VPbRs0fm89qf8ow46IWf0gjjth7s9XcRb430klRyJ4McydV/61j1uXyZ4xxVZXEXVRa5D57HPK3CnTz05srINS8zPVZL+hD7VOTI5AltPlQV1X/rVhDomtjV9pADpsVw2r96UzlucvuECkl8xU0lvelC16543x0pu/4ILSGcsbknrqX3urrPFutbgGTqmsca0RszqXX3Jw+5Wf8xgIVWPfQrlpi+F2Yzz626/8XH7JInWOmkVfd5To6HFTVYA3Lj9L7/sJ2RlwTveAwnxDt1hOzVp1fXTyqXPv+SEgQZR3DDS9dZjCLrbdPUwBQLTnjVHniocd0nH1P6cYIua3JLqxxf0hc4qhjqv/uXjYIeocxbhzE5SaczlihNQY9X7GZRcX/vhPxG2hmO39VgOArObAlsIf/8mMyy4OsjzBiVk7j4DUtDUg5cqmU35fH/4Z2bcOFwrYKNlEXS8ds2zOvT/kQh51JtxUgUaG9VuHko1HZXoPJUMW8TOszuUPOqD71ptcWxv7SqiX9FqP97VpsUilr/i24oxbb8ofdKA6F4ruTMzFnYRvF1zLZK1PXfvxR3Xf8u2UBerA/CbEOhwcCXUpS/fN32k//mifZo7Qya6dlNgYSRpsjaau45wzu2683mmZ4d9sWNeOQnVa7rrx+o5zz9TURV9oc6femDY5gzRSTYhgjaRp10UXdn7rW6mMEvybR4dEjQGfymjnt67vuuhCSVNYk5URaIHw3BpSjUevhyN+b+u/5MOJGuH8b/3aqKowlqWSku+68Yauiy4Ix/oGAFusJdBiLnjG0KrL9QXd/3V7Wkzgh8km8ZDs1zIVePpbvXavTcgPp8Wk+79u77rogposA82Dh80RnMrcb5RrR0ky/OCj28//I97wAiUz1TlqPcj0um/1oL61mvbqfgu6b7+5dNxSTdN4wErLshzalKob1OQasNanrnTc0tkP3ENHvdunm8ka5ayEwRtZsuuhHiayRtLNOGrZPg/cUzpuqU8drK2DMBWRmhLQ8QGhKyax6nz+wPlzVv+gcOknXbqN4WCsqoLeqEtknUxiLMO5dFvu0k/OXf3f+QPnq/MmqRUPnvKdpwx05HsG5oQ16oVzuVnXX9v1rRtdW0F9H9kk1vAC3ijRmaxqQ3ZSjE3U96Vt+a5v3bjP9ddyLqdesiKVu1iVaXfYnpFypCIQIWvLTz+3/SOf8vevMNwFTtR71M4Hea2hnBhlqsVsjYGkXvrMiWfO/Ma1hUMOjvVqY1lb7PJQdkGiay3LimCGMepcYcmiuffeVbr6a66tqG47M5PhyN/JhvS6apk6VoWSYWYWt921Fduv/tqce+8uLFmkzgXWYOaW23WBmQ7+ciiVSaTeB+dhZe2L/Z/5u8qdtxoomU6FIhx1/Xozt4MZxYZA6gc8KP+BC7u+/IX8wgWh2haZWhXs3e35tJ1j15B65UPuyfBPVg987ir36GoDw6ZToZpRMwNh/7XQKPUjpUKdawKJH/BwdulJnV+6snTqSY1DmMZ6j9N6YGBdtAVQMkacG7zj7qF/uFp+/RCDiTvAjCD4r5F0x0fHg9EGBWLeeUzpb67oOO8ctla9ByiWwMZ0TsFpPpkx7hAz0VYiNsZX0+G7Vgxf/W/uwfsJo4wO2Dyg6rNCQNiNVWbi/oz5l8gwEM72G1QU7XHLSlf8aemcs0wuES+kCsO1k1qmVxL22BGYtQBNYJMwQ2TkgYeHvn5j9e6V2r/OwBBK8YgdkcZc0jr1dnx+po79Chrfzhg25Rh0Y0oDXKoY9vDUNT//3jNKH7uk7YRjQAwRiMCYiUMkr1egayZ0TXGH892IKhs3j975g/Lt30sfWIPKFgYTiuAcDEProCOq8TrcTTtKNR6f1jNCIrgEeIFUFaMCQX5Wcvwx+fPf1/aBs/NzZ8d6wCI1dYxpF+O9AvQYyOv5sFCwIUCIKs+/UP3xvaMrVrkHH9GtG4BRgiHkCDmQqRcBiC6rTOQz/qyi5uhqUKYiUK+oKqoKDxRp1n72uKOKZ56aP/2U3KKF0YkuPibvhCL+e37B2BtA14U7sDY1pJrEXQCIfF9/9VdPlB9c49Y85p56Rl7eoMO9QDUzXA1gqJZJnN0UUb14hQd8RjLPUamb5+9nD11ijz6ycNzRucMPMzO6amdThkeDuFYPYe/YnXsF6B1Bzxjw8AKmkIZPgBJJpeJeWV99Zq17+ll5/gX38nrduMlv6/UDgzwywpWUvACqhiWfl7Yid3bYnm6aO8cesD8vWmAPWZwsWZjsvz/nc/XaBuHgRMOhvAKm26Jopf1/TWFYG1m/AiMAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjYtMDgtMjlUMTg6Mjk6NDQrMDA6MDBt+zUXAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDI2LTA4LTI5VDE4OjA3OjQzKzAwOjAwn6Q6VwAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyNi0wOC0yOVQxODoyOTo1OCswMDowMEC5xp4AAAAedEVYdGljYzpjb3B5cmlnaHQAR29vZ2xlIEluYy4gMjAxNqwLMzgAAAAUdEVYdGljYzpkZXNjcmlwdGlvbgBzUkdCupBzBwAAAABJRU5ErkJggg==" alt="CC Logo">
+    <img class="topbar-logo" src="cc-logo.png" alt="Chicken Crush">
     <div class="topbar-brand">
       <div class="topbar-title">Chicken Crush Indonesia</div>
-      <div class="topbar-sub" id="periodSubtitle">Live Revenue Dashboard V6.0 &middot; Agustus 2026</div>
+      <div class="topbar-sub" id="periodSubtitle">Live Revenue Dashboard V6.0.1 &middot; Agustus 2026</div>
     </div>
   </div>
   <div class="topbar-right">
@@ -1400,8 +1401,8 @@ body.sidebar-collapsed .main{
     <button class="btn-refresh" id="btnRefresh" onclick="refreshData()">
       <span class="spin-icon" id="refreshIcon">&#8635;</span> Refresh
     </button>
+    <span class="status-pill" title="Endpoint live tertanam di aplikasi">AUTO LIVE</span>
     <button class="btn-refresh" id="btnInstallPwa" onclick="installPwa60()" title="Pasang sebagai aplikasi">&#8681; Install App</button>
-    <button class="btn-setup" onclick="showModal()">&#9889; Setup Live</button>
   </div>
 </div>
 
@@ -1780,7 +1781,6 @@ body.sidebar-collapsed .main{
     </div>
     <div class="mix-hero-actions">
       <div class="mix-period-badge" id="mixPeriod">Periode aktif</div>
-      <a class="mix-input-link" href="input.html#mix" target="_blank" rel="noopener">＋ Input Manual</a>
     </div>
   </div>
 
@@ -1976,40 +1976,7 @@ body.sidebar-collapsed .main{
 </div><!-- /main -->
 
 <!-- ==================== MODAL ==================== -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal">
-    <button class="modal-close" onclick="hideModal()">&times;</button>
-    <h2>&#9889; Setup Live Data</h2>
-    <p>Hubungkan dashboard ke Google Sheets melalui URL Web App Apps Script. Setelah terhubung, dashboard melakukan sinkronisasi otomatis setiap 60 detik dan memperbarui KPI, grafik, serta ranking tanpa reload halaman.</p>
 
-    <h3>Langkah 1: Buka Google Sheets</h3>
-    <p>Buka spreadsheet data omset CCI Anda, lalu klik <strong>Extensions &rarr; Apps Script</strong>.</p>
-
-    <h3>Langkah 2: Gunakan Code.gs Live Connector V3</h3>
-    <p>Gunakan file <strong>AppsScript_Live_Dashboard_V5_2.gs</strong> yang saya sertakan. Versi ini membaca header secara otomatis dan mendukung format data <strong>wide</strong> maupun <strong>long</strong>.</p>
-    <div class="modal-note">Status <b>LIVE</b> hanya akan aktif jika dashboard benar-benar menerima data outlet dari Google Sheet — bukan hanya karena URL bisa dibuka.</div>
-
-    <h3>Langkah 3: Deploy</h3>
-    <ol>
-      <li>Klik <strong>Deploy &rarr; New deployment</strong></li>
-      <li>Pilih tipe: <strong>Web app</strong></li>
-      <li>Set "Execute as" = <strong>Me</strong></li>
-      <li>Set "Who has access" = <strong>Anyone</strong></li>
-      <li>Klik <strong>Deploy</strong> dan salin URL yang muncul</li>
-    </ol>
-
-    <h3>Langkah 4: Tempel URL di Bawah</h3>
-    <input type="text" id="scriptUrl" placeholder="https://script.google.com/macros/s/.../exec">
-    <div id="connectionDiagnostic" class="live-diagnostic">Belum ada pengujian koneksi.</div>
-
-
-    <div class="modal-btns">
-      <button class="save" onclick="testConnection()">Tes Koneksi</button>
-      <button class="save" onclick="saveUrl()">Simpan & Hubungkan</button>
-      <button class="disconnect" onclick="disconnectUrl()">Putuskan Koneksi</button>
-      <button class="cancel" onclick="hideModal()">Batal</button>
-    </div>
-  </div>
 </div>
 
 <!-- ==================== JAVASCRIPT ==================== -->
@@ -3088,8 +3055,10 @@ function fetchWithTimeout(url,ms,retries){
   }
   return run();
 }
+const CCI_API_URL_V601="https://script.google.com/macros/s/AKfycbz5ZRbzZL5xEXsicT5J9fiarT1dmcn2Plwb6trDM1nmBp3tWpCPXT7S9tOPH4nnARw/exec";
+function liveUrl601(){return CCI_API_URL_V601}
 function refreshData(){
-  var url=localStorage.getItem('cci_apps_script_url');
+  var url=liveUrl601();
   if(!url){updateStatus('local');setLiveError('');renderProfessionalStatus();return Promise.resolve(false)}
   if(refreshInFlight)return refreshInFlight;
 
@@ -3132,7 +3101,7 @@ function refreshData(){
   return refreshInFlight;
 }
 function refreshAnalytics(force){
-  var url=localStorage.getItem('cci_apps_script_url');
+  var url=liveUrl601();
   if(!url)return Promise.resolve(false);
   if(!force&&analyticsLastFetched&&Date.now()-analyticsLastFetched<ANALYTICS_TTL_MS)return Promise.resolve(true);
   if(analyticsInFlight)return analyticsInFlight;
@@ -3163,7 +3132,7 @@ function scheduleNextRefresh(){nextRefreshAt=Date.now()+LIVE_INTERVAL_MS}
 function startAutoRefresh(){
   if(autoRefreshTimer)clearInterval(autoRefreshTimer);
   if(countdownTimer)clearInterval(countdownTimer);
-  var url=localStorage.getItem('cci_apps_script_url');if(!url)return;
+  var url=liveUrl601();if(!url)return;
   scheduleNextRefresh();
   autoRefreshTimer=setInterval(function(){
     if(document.hidden)return;
@@ -3182,7 +3151,7 @@ function startAutoRefresh(){
 }
 function showModal(){
   document.getElementById('modalOverlay').classList.add('show');
-  var saved=localStorage.getItem('cci_apps_script_url');if(saved)document.getElementById('scriptUrl').value=saved;
+  var saved=liveUrl601();if(saved)document.getElementById('scriptUrl').value=saved;
 }
 function hideModal(){document.getElementById('modalOverlay').classList.remove('show')}
 document.getElementById('modalOverlay').addEventListener('click',function(e){if(e.target===this)hideModal()});
@@ -3190,20 +3159,20 @@ function saveUrl(){
   var url=document.getElementById('scriptUrl').value.trim();
   if(!url){alert('Masukkan URL Apps Script terlebih dahulu.');return}
   if(url.indexOf('script.google.com')<0&&!confirm('URL tidak terlihat seperti Google Apps Script Web App. Tetap simpan?'))return;
-  localStorage.setItem('cci_apps_script_url',url);
+  /* V6.0.1 uses fixed endpoint */
   hideModal();refreshData().then(function(){startAutoRefresh();refreshAnalytics(false)});
 }
 function disconnectUrl(){
-  localStorage.removeItem('cci_apps_script_url');
+  /* V6.0.1 fixed endpoint cannot be disconnected */
   if(autoRefreshTimer)clearInterval(autoRefreshTimer);if(countdownTimer)clearInterval(countdownTimer);
   autoRefreshTimer=countdownTimer=null;appData.source='local';setLiveError('');renderSource();updateStatus('local');
   document.getElementById('scriptUrl').value='';renderConnectionDiagnostic(null);renderProfessionalStatus();hideModal();
 }
 document.addEventListener('visibilitychange',function(){
-  if(!document.hidden&&localStorage.getItem('cci_apps_script_url')&&Date.now()>=nextRefreshAt)refreshData();
+  if(!document.hidden&&liveUrl601()&&Date.now()>=nextRefreshAt)refreshData();
 });
 window.addEventListener('online',function(){
-  if(localStorage.getItem('cci_apps_script_url')){refreshData();refreshAnalytics(false)}
+  refreshData();refreshAnalytics(false);startAutoRefresh();
 });
 window.addEventListener('offline',function(){
   updateStatus('error');
@@ -3213,7 +3182,7 @@ window.addEventListener('offline',function(){
 
 
 
-/* ========== POS USAGE V6.0 ========== */
+/* ========== POS USAGE V6.0.1 ========== */
 var POS_ESB_MAPPING_599={
   PUSAT:['CCS','SCH','Godean','Tamsis'],
   KALIMANTAN:['Martapura','Banjarmasin','Banjarbaru 2'],
@@ -3575,7 +3544,7 @@ function validateLivePayload(data){
   if(meta.connectorVersion!=='CCI-LIVE-V5.6'){
     return {
       ok:false,
-      message:'Dashboard mendeteksi connector lama. Gunakan Code.gs V6.0 lalu update deployment Web App.',
+      message:'Dashboard mendeteksi connector lama. Gunakan Code.gs V6.0.1 lalu update deployment Web App.',
       meta:meta
     };
   }
@@ -3868,7 +3837,7 @@ function downloadRankingCSV(){
 
 
 
-/* ========== PWA V6.0 ========== */
+/* ========== PWA V6.0.1 ========== */
 var deferredPwaPrompt60=null;
 window.addEventListener('beforeinstallprompt',function(e){
   e.preventDefault();
@@ -3907,14 +3876,9 @@ if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)){
 
   if(restoreSnapshot())renderAll();else renderAll();
 
-  var url=localStorage.getItem('cci_apps_script_url');
-  if(url){
-    refreshData();
-    startAutoRefresh();
-  }else{
-    updateStatus('local');
-    renderProfessionalStatus();
-  }
+  refreshData();
+  startAutoRefresh();
+  refreshAnalytics(false);
 })();
 </script>
 </body>
