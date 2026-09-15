@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" href="icon-192.png">
 
-<title>Chicken Crush Indonesia | Live Revenue Dashboard V6.0.4.2</title>
+<title>Chicken Crush Indonesia | Live Revenue Dashboard V6.0.4.3</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <style>
@@ -1483,7 +1483,7 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
 }
 
 /* =========================================================
-   V6.0.4.2 — MOBILE WIDTH / RESPONSIVE HOTFIX
+   V6.0.4.3 — MOBILE WIDTH / RESPONSIVE HOTFIX
    Ensures all app pages use the full phone viewport.
 ========================================================= */
 @media (max-width:900px){
@@ -1546,7 +1546,7 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
   .sidebar-nav{grid-template-columns:repeat(6,minmax(0,1fr))!important;}
 }
 /* =========================================================
-   V6.0.4.2 — MODERN APP LOADING
+   V6.0.4.3 — MODERN APP LOADING
 ========================================================= */
 .app-loading-6032{
   position:fixed;inset:0;z-index:20000;
@@ -1617,7 +1617,7 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
 }
 
 /* =========================================================
-   V6.0.4.2 — DESKTOP COLLAPSIBLE NAV + MODERN REFRESH
+   V6.0.4.3 — DESKTOP COLLAPSIBLE NAV + MODERN REFRESH
 ========================================================= */
 
 /* Desktop sidebar collapse fix: overrides the later !important desktop shell. */
@@ -1872,11 +1872,11 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
 }
 
 /* =========================================================
-   V6.0.4.2 — WEEKLY COMPARISON SLIDE
+   V6.0.4.3 — WEEKLY COMPARISON SLIDE
 ========================================================= */
 
 /* =========================================================
-   V6.0.4.2 — WEEKLY COMPARISON CLARITY REDESIGN
+   V6.0.4.3 — WEEKLY COMPARISON CLARITY REDESIGN
 ========================================================= */
 .weekly-simple-hero{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding:24px 26px;margin-bottom:12px;border:1px solid rgba(143,164,190,.13);border-radius:21px;background:linear-gradient(145deg,rgba(14,30,51,.98),rgba(8,21,36,.98));box-shadow:0 14px 42px rgba(0,0,0,.16)}
 .weekly-simple-hero h2{font-size:25px;letter-spacing:-.55px;margin-top:4px;color:#f5f8fc}.weekly-simple-hero p{max-width:850px;margin-top:8px;color:#8395ad;font-size:10px;line-height:1.65}.weekly-simple-hero p b{color:#c9d7e8}.weekly-simple-meta{display:flex;flex-direction:column;align-items:flex-end;gap:8px;min-width:170px}
@@ -1892,7 +1892,7 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
 @media(max-width:520px){.weekly-week-cards{grid-template-columns:1fr}.weekly-week-card{display:grid;grid-template-columns:1fr auto;column-gap:12px}.weekly-week-head,.weekly-week-status,.weekly-week-values,.weekly-week-result{grid-column:1/-1}.weekly-summary-card strong{font-size:14px}}
 
 /* =========================================================
-   V6.0.4.2 — FAST MINIMAL LOADING
+   V6.0.4.3 — FAST MINIMAL LOADING
 ========================================================= */
 .app-loading-6032{
   position:fixed;inset:0;z-index:20000;
@@ -1979,8 +1979,8 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
   <div class="topbar-left">
     <img class="topbar-logo" src="cc-logo.png" alt="Chicken Crush">
     <div class="topbar-brand">
-      <div class="topbar-title">Chicken Crush Indonesia <span class="v603-badge">V6.0.4.2</span></div>
-      <div class="topbar-sub" id="periodSubtitle">Performance Dashboard V6.0.4.2 &middot; Agustus 2026</div>
+      <div class="topbar-title">Chicken Crush Indonesia <span class="v603-badge">V6.0.4.3</span></div>
+      <div class="topbar-sub" id="periodSubtitle">Performance Dashboard V6.0.4.3 &middot; Agustus 2026</div>
     </div>
   </div>
   <div class="topbar-right">
@@ -2429,47 +2429,47 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
 <section id="weeklyCompareView" class="weekly-compare-center hidden-view">
   <div class="weekly-simple-hero">
     <div>
-      <div class="page-kicker">WEEKLY PERFORMANCE</div>
-      <h2>Perbandingan Omset Mingguan</h2>
-      <p>Bandingkan omset aktual dengan nilai pembanding yang Anda tentukan. Fokus utama: <b>Aktual</b>, <b>Pembanding</b>, <b>Selisih</b>, dan <b>perubahan dari minggu sebelumnya</b>.</p>
+      <div class="page-kicker">WEEKLY MONTH-TO-MONTH</div>
+      <h2>Perbandingan Minggu yang Sama Antar Bulan</h2>
+      <p>Setiap minggu pada bulan berjalan dibandingkan dengan <b>minggu yang sama pada bulan sebelumnya</b>. Contoh: <b>Minggu 1 September</b> dibanding <b>Minggu 1 Agustus</b>. Gap menunjukkan berapa persen omset <b>lebih tinggi</b> atau <b>lebih rendah</b>.</p>
     </div>
     <div class="weekly-simple-meta">
       <span class="weekly-period-badge" id="weeklyComparePeriod">Periode aktif</span>
-      <span class="weekly-compare-label" id="weeklyCompareLabel">Pembanding Manual</span>
+      <span class="weekly-compare-label" id="weeklyCompareLabel">vs bulan sebelumnya</span>
     </div>
   </div>
 
   <div class="weekly-reading-guide">
-    <span><i class="weekly-dot actual"></i><b>Aktual</b> = otomatis dari Omset Mingguan</span>
-    <span><i class="weekly-dot compare"></i><b>Pembanding</b> = input Owner</span>
-    <span><i class="weekly-dot delta"></i><b>Selisih %</b> = aktual dibanding pembanding</span>
+    <span><i class="weekly-dot actual"></i><b>Bulan Berjalan</b> = otomatis dari Omset Mingguan</span>
+    <span><i class="weekly-dot compare"></i><b>Bulan Sebelumnya</b> = input manual Owner per minggu</span>
+    <span><i class="weekly-dot delta"></i><b>Gap %</b> = selisih minggu yang sama antar bulan</span>
   </div>
 
   <div class="weekly-summary-grid">
     <div class="weekly-summary-card actual">
       <span>Minggu Terbanding</span>
       <strong id="weeklyCoverageKpi">0 / 0</strong>
-      <small id="weeklyCoverageSub">Belum ada pembanding valid</small>
+      <small id="weeklyCoverageSub">Belum ada data bulan sebelumnya</small>
     </div>
     <div class="weekly-summary-card actual">
-      <span>Total Aktual</span>
+      <span id="weeklyActualKpiLabel">Total Bulan Berjalan</span>
       <strong id="weeklyActualTotal">—</strong>
-      <small id="weeklyActualSub">Hanya minggu dengan pembanding valid</small>
+      <small id="weeklyActualSub">Hanya minggu yang memiliki pembanding</small>
     </div>
     <div class="weekly-summary-card compare">
-      <span>Total Pembanding</span>
+      <span id="weeklyCompareKpiLabel">Total Bulan Sebelumnya</span>
       <strong id="weeklyCompareTotal">—</strong>
-      <small id="weeklyCompareSub">Input manual Owner</small>
+      <small id="weeklyCompareSub">Diinput dari Panel Owner</small>
     </div>
     <div class="weekly-summary-card delta">
-      <span>Selisih Total</span>
+      <span>Gap Total</span>
       <strong id="weeklyDeltaTotal">—</strong>
       <small id="weeklyDeltaSub">Belum dapat dihitung</small>
     </div>
   </div>
 
   <div class="weekly-section-head">
-    <div><h3>Ringkasan per Minggu</h3><span>Lihat posisi setiap minggu tanpa membaca tabel panjang.</span></div>
+    <div><h3>Perbandingan per Minggu</h3><span>Minggu 1 vs Minggu 1, Minggu 2 vs Minggu 2, dan seterusnya.</span></div>
     <span id="weeklyTableCount" class="weekly-count-pill">0 minggu</span>
   </div>
   <div id="weeklyWeekCards" class="weekly-week-cards"></div>
@@ -2479,15 +2479,15 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
   <div class="weekly-compare-layout weekly-simple-layout">
     <div class="weekly-compare-card">
       <div class="weekly-card-head">
-        <div><h3>Aktual vs Pembanding</h3><span id="weeklyCoverageText">Belum ada data pembanding valid</span></div>
-        <span class="weekly-live-pill">AKTUAL + PEMBANDING</span>
+        <div><h3>Omset Mingguan: Bulan Berjalan vs Bulan Sebelumnya</h3><span id="weeklyCoverageText">Belum ada data pembanding</span></div>
+        <span class="weekly-live-pill">SAME WEEK COMPARISON</span>
       </div>
       <div class="weekly-chart-shell"><canvas id="chartWeeklyCompare"></canvas></div>
-      <div class="weekly-chart-note">Grafik hanya menampilkan pembanding yang valid. Minggu berjalan diberi status <b>Sementara</b>; minggu yang belum berjalan tidak dihitung sebagai penurunan.</div>
+      <div class="weekly-chart-note">Minggu berjalan tetap ditampilkan sebagai <b>Sementara</b>. Gap final dibaca setelah minggu tersebut selesai.</div>
     </div>
 
     <div class="weekly-compare-card weekly-insight-card">
-      <div class="weekly-card-head"><div><h3>Performa Antar Minggu</h3><span>Perubahan aktual dari minggu sebelumnya</span></div></div>
+      <div class="weekly-card-head"><div><h3>Gap per Minggu</h3><span>Lebih tinggi / lebih rendah dibanding minggu yang sama bulan sebelumnya</span></div></div>
       <div id="weeklyInsightList" class="weekly-insight-list"></div>
     </div>
   </div>
@@ -3876,11 +3876,11 @@ function saveUrl(){
   var url=document.getElementById('scriptUrl').value.trim();
   if(!url){alert('Masukkan URL Apps Script terlebih dahulu.');return}
   if(url.indexOf('script.google.com')<0&&!confirm('URL tidak terlihat seperti Google Apps Script Web App. Tetap simpan?'))return;
-  /* V6.0.4.2 uses fixed endpoint */
+  /* V6.0.4.3 uses fixed endpoint */
   hideModal();refreshData().then(function(){startAutoRefresh();refreshAnalytics(false)});
 }
 function disconnectUrl(){
-  /* V6.0.4.2 fixed endpoint cannot be disconnected */
+  /* V6.0.4.3 fixed endpoint cannot be disconnected */
   if(autoRefreshTimer)clearInterval(autoRefreshTimer);if(countdownTimer)clearInterval(countdownTimer);
   autoRefreshTimer=countdownTimer=null;appData.source='local';setLiveError('');renderSource();updateStatus('local');
   document.getElementById('scriptUrl').value='';renderConnectionDiagnostic(null);renderProfessionalStatus();hideModal();
@@ -4062,7 +4062,16 @@ function renderPosUsage599(){
 
 
 
-/* ========== WEEKLY COMPARISON V6.0.4.2 — CLEAR VIEW ========== */
+/* ========== WEEKLY COMPARISON V6.0.4.3 — SAME WEEK PREVIOUS MONTH ========== */
+function weeklyMonthMeta6043(period){
+  var names=['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+  var map={januari:0,februari:1,maret:2,april:3,mei:4,juni:5,juli:6,agustus:7,september:8,oktober:9,november:10,desember:11};
+  var m=String(period||'').toLowerCase().match(/(januari|februari|maret|april|mei|juni|juli|agustus|september|oktober|november|desember)\s+(\d{4})/);
+  if(!m)return {current:String(period||'Bulan Berjalan'),previous:'Bulan Sebelumnya',currentMonth:'Bulan Berjalan',previousMonth:'Bulan Sebelumnya'};
+  var idx=map[m[1]],year=Number(m[2]),pidx=idx-1,pyear=year;
+  if(pidx<0){pidx=11;pyear--}
+  return {current:names[idx]+' '+year,previous:names[pidx]+' '+pyear,currentMonth:names[idx],previousMonth:names[pidx]};
+}
 function weeklyPeriodInfo6041(){
   var months={januari:0,februari:1,maret:2,april:3,mei:4,juni:5,juli:6,agustus:7,september:8,oktober:9,november:10,desember:11};
   var m=String(appData.period||'').toLowerCase().match(/(januari|februari|maret|april|mei|juni|juli|agustus|september|oktober|november|desember)\s+(\d{4})/);
@@ -4076,109 +4085,130 @@ function weeklyPeriodInfo6041(){
   return {isCurrent:true,isPast:false,currentWeek:Math.max(1,Math.ceil(ref.getDate()/7))};
 }
 function weeklyCompareHealth6041(actual,compare){
-  if(!(compare>0))return {ok:false,kind:'missing',message:'Belum ada pembanding'};
-  if(actual>=100000&&compare<10000)return {ok:false,kind:'invalid',message:'Nominal pembanding terlalu kecil'};
+  if(!(compare>0))return {ok:false,kind:'missing',message:'Belum ada data bulan sebelumnya'};
+  if(actual>=100000&&compare<10000)return {ok:false,kind:'invalid',message:'Nominal bulan sebelumnya terlalu kecil'};
   return {ok:true,kind:'valid',message:'Valid'};
 }
 function weeklyCompareRows604(){
   var actual=(appData.weekly||[]).map(function(x,i){return {week:i+1,label:String(x.label||('Minggu '+(i+1))),actual:safeNum(x.omset)}});
   var compareMap={};
   (appData.weeklyCompare||[]).forEach(function(x){compareMap[Math.round(safeNum(x.week))]=x});
-  var pi=weeklyPeriodInfo6041();
-  return actual.map(function(x,i){
+  var pi=weeklyPeriodInfo6041(),meta=weeklyMonthMeta6043(appData.period);
+  return actual.map(function(x){
     var c=compareMap[x.week]||{},compare=safeNum(c.compare),health=weeklyCompareHealth6041(x.actual,compare);
     var stage=pi.isPast?'complete':(x.week<pi.currentWeek?'complete':(x.week===pi.currentWeek?'current':'future'));
     var diff=health.ok&&stage!=='future'?x.actual-compare:null;
-    var diffPct=health.ok&&stage!=='future'&&compare>0?(x.actual/compare-1):null;
-    var prev=i>0?actual[i-1].actual:0;
-    var wow=i>0&&stage==='complete'&&prev>0?(x.actual/prev-1):null;
-    return {week:x.week,label:x.label,actual:x.actual,compare:compare,diff:diff,diffPct:diffPct,wow:wow,health:health,stage:stage,
-      compareLabel:String(c.compareLabel||'Pembanding Manual'),note:String(c.note||'')};
+    var gap=health.ok&&stage!=='future'&&compare>0?(x.actual/compare-1):null;
+    return {week:x.week,label:x.label,actual:x.actual,compare:compare,diff:diff,diffPct:gap,gap:gap,health:health,stage:stage,
+      currentPeriod:meta.current,previousPeriod:meta.previous,currentMonth:meta.currentMonth,previousMonth:meta.previousMonth,
+      compareLabel:meta.previous,note:String(c.note||'')};
   });
 }
 function weeklyPct604(v){return v==null||!isFinite(v)?'—':((v>=0?'+':'')+(v*100).toFixed(1).replace('.',',')+'%')}
 function weeklySignedRp6041(v){if(v==null||!isFinite(v))return '—';return (v>=0?'+':'−')+fmt(Math.abs(v))}
+function weeklyGapText6043(v){
+  if(v==null||!isFinite(v))return 'Belum dapat dihitung';
+  var pct=Math.abs(v*100).toFixed(1).replace('.',',')+'%';
+  if(Math.abs(v)<0.001)return 'Sama dengan bulan sebelumnya';
+  return v>0?('Lebih tinggi '+pct):('Lebih rendah '+pct);
+}
 function weeklyPerf604(row){
   if(row.stage==='future')return {text:'Belum berjalan',cls:'missing'};
   if(row.health.kind==='invalid')return {text:'Periksa input',cls:'missing'};
-  if(!row.health.ok)return {text:'Belum input',cls:'missing'};
+  if(!row.health.ok)return {text:'Belum input bulan lalu',cls:'missing'};
   if(row.stage==='current')return {text:'Sementara',cls:'flat'};
-  if(Math.abs(row.diffPct)<0.001)return {text:'Sesuai pembanding',cls:'flat'};
-  return row.diffPct>0?{text:'Di atas pembanding',cls:'up'}:{text:'Di bawah pembanding',cls:'down'};
+  if(Math.abs(row.diffPct)<0.001)return {text:'Sama',cls:'flat'};
+  return row.diffPct>0?{text:'Lebih tinggi',cls:'up'}:{text:'Lebih rendah',cls:'down'};
 }
 function renderWeeklyCompare604(){
-  var rows=weeklyCompareRows604();
+  var rows=weeklyCompareRows604(),meta=weeklyMonthMeta6043(appData.period);
   var validRows=rows.filter(function(r){return r.health.ok&&r.stage!=='future'});
   var invalidRows=rows.filter(function(r){return r.health.kind==='invalid'});
   var actualMatched=validRows.reduce(function(s,r){return s+r.actual},0);
   var compareTotal=validRows.reduce(function(s,r){return s+r.compare},0);
   var totalDiff=compareTotal>0?actualMatched-compareTotal:null;
   var totalPct=compareTotal>0?(actualMatched/compareTotal-1):null;
-  var label='Pembanding Manual';
-  var saved=(appData.weeklyCompare||[]).find(function(x){return String(x.compareLabel||'').trim()});
-  if(saved)label=String(saved.compareLabel||label);
 
-  setText('weeklyComparePeriod',appData.period||'Periode aktif');
-  setText('weeklyCompareLabel',label);
+  setText('weeklyComparePeriod',meta.current);
+  setText('weeklyCompareLabel','vs '+meta.previous);
+  setText('weeklyActualKpiLabel','Total '+meta.currentMonth);
+  setText('weeklyCompareKpiLabel','Total '+meta.previousMonth);
   setText('weeklyCoverageKpi',validRows.length+' / '+rows.length);
-  setText('weeklyCoverageSub',invalidRows.length?(invalidRows.length+' input perlu diperiksa'):(validRows.length?'minggu memiliki pembanding valid':'Belum ada pembanding valid'));
+  setText('weeklyCoverageSub',invalidRows.length?(invalidRows.length+' input perlu diperiksa'):(validRows.length?'minggu sudah memiliki data '+meta.previousMonth:'Belum ada data '+meta.previousMonth));
   setText('weeklyActualTotal',validRows.length?fmt(actualMatched):'—');
-  setText('weeklyActualSub',validRows.length?'Total aktual pada minggu yang dibandingkan':'Menunggu pembanding valid');
+  setText('weeklyActualSub',validRows.length?'Total '+meta.current+' pada minggu yang dibandingkan':'Menunggu data bulan sebelumnya');
   setText('weeklyCompareTotal',validRows.length?fmt(compareTotal):'—');
-  setText('weeklyCompareSub',validRows.length?(label+' · '+validRows.length+' minggu'):'Input melalui Owner');
-  setText('weeklyDeltaTotal',totalPct==null?'—':(weeklySignedRp6041(totalDiff)+' · '+weeklyPct604(totalPct)));
-  setText('weeklyDeltaSub',totalPct==null?'Belum dapat dihitung':(totalPct>=0?'Aktual lebih tinggi dari pembanding':'Aktual lebih rendah dari pembanding'));
-  setText('weeklyCoverageText',validRows.length?(validRows.length+' minggu memiliki pembanding valid'):'Belum ada pembanding valid');
+  setText('weeklyCompareSub',validRows.length?(meta.previous+' · '+validRows.length+' minggu'):'Input melalui Owner');
+  setText('weeklyDeltaTotal',totalPct==null?'—':weeklyPct604(totalPct));
+  setText('weeklyDeltaSub',totalPct==null?'Belum dapat dihitung':weeklyGapText6043(totalPct));
+  setText('weeklyCoverageText',validRows.length?(validRows.length+' minggu: '+meta.current+' vs '+meta.previous):('Belum ada data '+meta.previous));
   setText('weeklyTableCount',rows.length+' minggu');
 
   var alert=document.getElementById('weeklyDataAlert');
   if(alert){
     if(invalidRows.length){
       alert.classList.remove('hidden-view');
-      alert.innerHTML='<b>Periksa input pembanding:</b> '+invalidRows.map(function(r){return esc(r.label)+' = '+fmtFull(r.compare)}).join(', ')+'. Nominal terlihat terlalu kecil. Contoh Rp2 juta harus diinput sebagai <b>2.000.000</b> atau <b>2 jt</b> dari Panel Owner.';
+      alert.innerHTML='<b>Periksa input '+esc(meta.previous)+':</b> '+invalidRows.map(function(r){return esc('Minggu '+r.week)+' = '+fmtFull(r.compare)}).join(', ')+'. Masukkan omset minggu yang sama pada bulan sebelumnya.';
     }else alert.classList.add('hidden-view');
   }
 
   var cards=document.getElementById('weeklyWeekCards');
   if(cards){
     cards.innerHTML=rows.map(function(r){
-      var perf=weeklyPerf604(r),tone='muted',status=perf.text;
+      var perf=weeklyPerf604(r),tone='muted';
       if(r.health.kind==='invalid')tone='warn';
       else if(r.stage==='future')tone='muted';
       else if(r.stage==='current')tone='warn';
       else if(r.health.ok)tone=r.diffPct>=0?'good':'bad';
-      var diffClass=r.diffPct==null?'':(r.diffPct>=0?'up':'down');
-      var wowClass=r.wow==null?'':(r.wow>=0?'up':'down');
+      var cls=r.diffPct==null?'':(r.diffPct>=0?'up':'down');
       var compareText=r.health.kind==='invalid'?(fmt(r.compare)+' ⚠'):(r.compare>0?fmt(r.compare):'—');
-      var diffText=r.health.ok&&r.stage!=='future'?(weeklySignedRp6041(r.diff)+' · '+weeklyPct604(r.diffPct)):'—';
-      var wowText=r.stage==='current'?'Belum final':(r.stage==='future'?'—':weeklyPct604(r.wow));
+      var gapText=r.health.ok&&r.stage!=='future'?(weeklyPct604(r.diffPct)+' · '+weeklyGapText6043(r.diffPct)):'—';
       return '<div class="weekly-week-card '+tone+'">'+
-        '<div class="weekly-week-head"><strong>'+esc(r.label)+'</strong><span>'+esc(r.stage==='current'?'Minggu berjalan':(r.stage==='future'?'Belum berjalan':'Selesai'))+'</span></div>'+
-        '<span class="weekly-week-status '+tone+'">'+esc(status)+'</span>'+
-        '<div class="weekly-week-values"><div><span>Aktual</span><strong>'+fmt(r.actual)+'</strong></div><div class="compare"><span>Pembanding</span><strong>'+compareText+'</strong></div></div>'+
-        '<div class="weekly-week-result"><div><span>Selisih</span><strong class="'+diffClass+'">'+diffText+'</strong></div><div class="wow"><span>vs Minggu Sebelumnya</span><strong class="'+wowClass+'">'+wowText+'</strong></div></div>'+
+        '<div class="weekly-week-head"><strong>Minggu '+r.week+'</strong><span>'+esc(r.stage==='current'?'Minggu berjalan':(r.stage==='future'?'Belum berjalan':'Selesai'))+'</span></div>'+
+        '<span class="weekly-week-status '+tone+'">'+esc(perf.text)+'</span>'+
+        '<div class="weekly-week-values">'+
+          '<div><span>'+esc(r.currentMonth)+' · Minggu '+r.week+'</span><strong>'+fmt(r.actual)+'</strong></div>'+
+          '<div class="compare"><span>'+esc(r.previousMonth)+' · Minggu '+r.week+'</span><strong>'+compareText+'</strong></div>'+
+        '</div>'+
+        '<div class="weekly-week-result"><div><span>Gap Omset</span><strong class="'+cls+'">'+(r.diff==null?'—':weeklySignedRp6041(r.diff))+'</strong></div>'+
+        '<div class="wow"><span>Gap %</span><strong class="'+cls+'">'+gapText+'</strong></div></div>'+
       '</div>';
     }).join('');
   }
 
   var insight=document.getElementById('weeklyInsightList');
   if(insight){
-    insight.innerHTML=rows.map(function(r,i){
-      if(r.stage==='future')return '<div class="weekly-insight-item future"><div><strong>'+esc(r.label)+'</strong><span>Periode minggu belum berjalan</span></div><span class="weekly-insight-tag">Belum berjalan</span></div>';
-      if(r.stage==='current')return '<div class="weekly-insight-item current"><div><strong>'+esc(r.label)+'</strong><span>Minggu sedang berjalan, WoW belum final</span></div><span class="weekly-insight-tag current">Sementara</span></div>';
-      var cls=r.wow==null?'zero':(r.wow>0?'up':(r.wow<0?'down':'zero'));
-      var sub=i===0?'Minggu pertama periode aktif':'Dibandingkan '+rows[i-1].label;
-      return '<div class="weekly-insight-item"><div><strong>'+esc(r.label)+'</strong><span>'+esc(sub)+'</span></div><span class="weekly-insight-pct '+cls+'">'+weeklyPct604(r.wow)+'</span></div>';
+    insight.innerHTML=rows.map(function(r){
+      var pair='Minggu '+r.week+' '+r.currentMonth+' vs Minggu '+r.week+' '+r.previousMonth;
+      if(r.stage==='future')return '<div class="weekly-insight-item future"><div><strong>'+esc(pair)+'</strong><span>Belum masuk periode minggu ini</span></div><span class="weekly-insight-tag">Belum berjalan</span></div>';
+      if(r.health.kind==='invalid')return '<div class="weekly-insight-item"><div><strong>'+esc(pair)+'</strong><span>Periksa nominal '+esc(r.previousMonth)+'</span></div><span class="weekly-insight-tag">Periksa input</span></div>';
+      if(!r.health.ok)return '<div class="weekly-insight-item"><div><strong>'+esc(pair)+'</strong><span>Data '+esc(r.previousMonth)+' belum diinput</span></div><span class="weekly-insight-tag">Belum input</span></div>';
+      var cls=r.diffPct==null?'zero':(r.diffPct>0?'up':(r.diffPct<0?'down':'zero'));
+      return '<div class="weekly-insight-item '+(r.stage==='current'?'current':'')+'"><div><strong>'+esc(pair)+'</strong><span>'+esc(weeklyGapText6043(r.diffPct)+(r.stage==='current'?' · Sementara':''))+'</span></div><span class="weekly-insight-pct '+cls+'">'+weeklyPct604(r.diffPct)+'</span></div>';
     }).join('');
   }
 
   destroyChart('weeklyCompare604');
   var canvas=document.getElementById('chartWeeklyCompare');
   if(canvas){
-    charts.weeklyCompare604=new Chart(canvas,{type:'bar',data:{labels:rows.map(function(r){return r.label}),datasets:[
-      {label:'Omset Aktual',data:rows.map(function(r){return r.stage==='future'?null:r.actual}),backgroundColor:'rgba(75,141,248,.78)',borderColor:'#4b8df8',borderWidth:1,borderRadius:7,maxBarThickness:58},
-      {label:label,data:rows.map(function(r){return r.health.ok&&r.stage!=='future'?r.compare:null}),backgroundColor:'rgba(245,158,11,.66)',borderColor:'#f59e0b',borderWidth:1,borderRadius:7,maxBarThickness:58}
-    ]},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:true,labels:{color:'#91a3ba',boxWidth:10,boxHeight:10,usePointStyle:true}},tooltip:Object.assign({},tooltipStyle,{callbacks:{label:function(ctx){return ctx.raw==null?ctx.dataset.label+': —':ctx.dataset.label+': '+fmtFull(ctx.raw)}}})},scales:{y:{ticks:{callback:fmtShort},grid:gridStyle},x:{grid:{display:false}}}}});
+    charts.weeklyCompare604=new Chart(canvas,{
+      type:'bar',
+      data:{labels:rows.map(function(r){return 'Minggu '+r.week}),datasets:[
+        {label:meta.current,data:rows.map(function(r){return r.stage==='future'?null:r.actual}),backgroundColor:'rgba(75,141,248,.78)',borderColor:'#4b8df8',borderWidth:1,borderRadius:7,maxBarThickness:58},
+        {label:meta.previous,data:rows.map(function(r){return r.health.ok&&r.stage!=='future'?r.compare:null}),backgroundColor:'rgba(245,158,11,.66)',borderColor:'#f59e0b',borderWidth:1,borderRadius:7,maxBarThickness:58}
+      ]},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{
+        legend:{display:true,labels:{color:'#91a3ba',boxWidth:10,boxHeight:10,usePointStyle:true}},
+        tooltip:Object.assign({},tooltipStyle,{callbacks:{
+          label:function(ctx){return ctx.raw==null?ctx.dataset.label+': —':ctx.dataset.label+': '+fmtFull(ctx.raw)},
+          footer:function(items){
+            if(!items||items.length<2||items[0].raw==null||items[1].raw==null||!Number(items[1].raw))return '';
+            var gap=Number(items[0].raw)/Number(items[1].raw)-1;
+            return 'Gap: '+weeklyPct604(gap)+' · '+weeklyGapText6043(gap);
+          }
+        }})
+      },scales:{y:{ticks:{callback:fmtShort},grid:gridStyle},x:{grid:{display:false}}}}
+    });
   }
 }
 
@@ -4401,7 +4431,7 @@ function validateLivePayload(data){
   if(meta.connectorVersion!=='CCI-LIVE-V5.6'){
     return {
       ok:false,
-      message:'Dashboard mendeteksi connector lama. Gunakan Code.gs V6.0.4.2 lalu update deployment Web App.',
+      message:'Dashboard mendeteksi connector lama. Gunakan Code.gs V6.0.4.3 lalu update deployment Web App.',
       meta:meta
     };
   }
@@ -4613,11 +4643,12 @@ function downloadExcelReport(){
   var weeklyAOA=[['Minggu','Omset']].concat((appData.weekly||[]).map(function(x){return [x.label,safeNum(x.omset)]}));
   XLSX.utils.book_append_sheet(wb,makeSheet(weeklyAOA,[24,18]),'Mingguan');
 
-  var weeklyCompareAOA=[['Minggu','Omset Aktual','Pembanding','Selisih Rp','Selisih %','WoW Aktual','Label Pembanding']];
+  var wm6043=weeklyMonthMeta6043(appData.period);
+  var weeklyCompareAOA=[['Minggu',wm6043.current,wm6043.previous,'Selisih Rp','Gap %','Status']];
   weeklyCompareRows604().forEach(function(r){weeklyCompareAOA.push([
-    r.label,r.actual,r.compare||0,r.diff==null?'':r.diff,r.diffPct==null?'':r.diffPct,r.wow==null?'':r.wow,r.compareLabel||''
+    'Minggu '+r.week,r.actual,r.compare||0,r.diff==null?'':r.diff,r.diffPct==null?'':r.diffPct,weeklyGapText6043(r.diffPct)
   ])});
-  XLSX.utils.book_append_sheet(wb,makeSheet(weeklyCompareAOA,[24,18,18,18,14,14,24]),'Perbandingan Mingguan');
+  XLSX.utils.book_append_sheet(wb,makeSheet(weeklyCompareAOA,[18,20,20,18,14,24]),'Mingguan vs Bulan Lalu');
 
   var monthlyAOA=[['Bulan','Omset','Pertumbuhan']].concat((appData.monthly||[]).map(function(x){return [x.bulan,safeNum(x.omset),x.growth==null?'':Number(x.growth)]}));
   var wsMonthly=makeSheet(monthlyAOA,[20,18,14]);
@@ -4751,7 +4782,7 @@ window.addEventListener('appinstalled',function(){
 
 
 
-/* ========== MODERN REFRESH V6.0.4.2 ========== */
+/* ========== MODERN REFRESH V6.0.4.3 ========== */
 var refreshToastTimer6033=null;
 
 function showRefreshToast6033(state,title,sub){
@@ -4811,7 +4842,7 @@ function finishRefresh6033(result,manual){
   }
 }
 
-/* ========== APP LOADING + LIVE RESUME V6.0.4.2 ========== */
+/* ========== APP LOADING + LIVE RESUME V6.0.4.3 ========== */
 function loadingState6032(text){
   var el=document.getElementById('loadingState6032');
   if(el)el.textContent=text||'';
@@ -4826,7 +4857,7 @@ function runInitialLiveSync6032(){
   updateStatus('connecting');
   loadingState6032('Menyinkronkan data terbaru...');
 
-  // V6.0.4.2: splash maksimal sekitar 650 ms. Sinkronisasi tetap lanjut di background.
+  // V6.0.4.3: splash maksimal sekitar 650 ms. Sinkronisasi tetap lanjut di background.
   var splashTimer=setTimeout(function(){hideAppLoading6032(0)},650);
 
   var task=refreshData();
