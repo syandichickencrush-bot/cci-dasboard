@@ -385,7 +385,7 @@ body{
 .header-highlights{
   margin-top:18px;
   display:grid;
-  grid-template-columns:repeat(5,minmax(0,1fr));
+  grid-template-columns:repeat(6,minmax(0,1fr));
   gap:12px;
 }
 .highlight-pill{
@@ -1378,32 +1378,44 @@ body.sidebar-collapsed .main{
 @media(max-width:720px){.mix-hero{align-items:flex-start;flex-direction:column;padding:18px}.mix-hero-actions{width:100%;justify-content:space-between}.mix-kpi-grid{grid-template-columns:1fr 1fr}.mix-chart-shell{height:250px}#btnInstallPwa{display:none}}
 @media(max-width:430px){.mix-kpi-grid{grid-template-columns:1fr}}
 
-/* V6.0.3 Team Install Experience */
-@media(max-width:720px){
-  #btnInstallPwa{display:inline-flex!important}
+.owner-input-view{padding:8px 0 28px}
+.owner-input-frame-wrap{height:calc(100vh - 165px);min-height:620px;border:1px solid var(--border);border-radius:18px;overflow:hidden;background:#07111f}
+.owner-input-frame{width:100%;height:100%;border:0;background:#07111f}
+@media(max-width:900px){.owner-input-frame-wrap{height:calc(100vh - 120px);min-height:680px;border-radius:14px}}
+
+/* V6.0.3 Owner Authentication */
+.owner-auth-overlay{
+  position:fixed;inset:0;z-index:9999;background:
+    radial-gradient(circle at 50% 15%,rgba(237,28,36,.12),transparent 30%),
+    rgba(3,10,18,.97);
+  display:flex;align-items:center;justify-content:center;padding:20px
 }
-.team-install-banner{
-  margin:12px 0 0;padding:12px 14px;border:1px solid rgba(75,141,248,.17);
-  border-radius:14px;background:linear-gradient(135deg,rgba(75,141,248,.08),rgba(237,28,36,.045));
-  display:flex;align-items:center;justify-content:space-between;gap:12px
+.owner-auth-card{
+  width:min(420px,100%);padding:26px;border-radius:22px;border:1px solid rgba(255,255,255,.10);
+  background:linear-gradient(180deg,#10233a,#081625);box-shadow:0 28px 70px rgba(0,0,0,.55)
 }
-.team-install-copy{display:flex;align-items:center;gap:10px;min-width:0}
-.team-install-logo{width:38px;height:38px;border-radius:50%;object-fit:cover;flex:0 0 auto}
-.team-install-title{font-size:10px;font-weight:900;color:#edf4fc}
-.team-install-sub{font-size:8px;color:#8094ae;margin-top:2px;line-height:1.45}
-.team-install-actions{display:flex;gap:7px;align-items:center}
-.team-install-btn{
-  height:34px;padding:0 11px;border:1px solid rgba(75,141,248,.20);border-radius:10px;
-  background:#15345a;color:#dceaff;font-size:9px;font-weight:900;cursor:pointer;white-space:nowrap
+.owner-auth-brand{text-align:center;margin-bottom:18px}
+.owner-auth-logo{width:72px;height:72px;border-radius:50%;object-fit:cover;box-shadow:0 12px 30px rgba(0,0,0,.28)}
+.owner-auth-brand h2{margin:12px 0 4px;color:#fff;font-size:19px}
+.owner-auth-brand p{margin:0;color:#8194ad;font-size:9px;line-height:1.5}
+.owner-auth-field{margin-top:11px}
+.owner-auth-field label{display:block;color:#8296b1;font-size:8px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.owner-auth-field input{
+  width:100%;height:42px;padding:0 12px;border-radius:11px;border:1px solid rgba(255,255,255,.10);
+  background:#07131f;color:#edf4fb;outline:none;font-size:11px
 }
-.team-install-close{
-  width:30px;height:30px;border:0;border-radius:9px;background:rgba(255,255,255,.04);
-  color:#7f92ab;font-size:14px;cursor:pointer
+.owner-auth-field input:focus{border-color:rgba(75,141,248,.55);box-shadow:0 0 0 3px rgba(75,141,248,.07)}
+.owner-auth-btn{
+  width:100%;height:44px;margin-top:16px;border:0;border-radius:11px;background:#ed1c24;
+  color:#fff;font-size:10px;font-weight:900;cursor:pointer
 }
-@media(max-width:620px){
-  .team-install-banner{align-items:flex-start}
-  .team-install-copy{align-items:flex-start}
-  .team-install-actions{flex-direction:column}
+.owner-auth-btn:disabled{opacity:.55;cursor:not-allowed}
+.owner-auth-msg{display:none;margin-top:11px;padding:9px 10px;border-radius:10px;background:rgba(237,28,36,.08);border:1px solid rgba(237,28,36,.13);color:#ff9da1;font-size:9px;line-height:1.45}
+.owner-auth-msg.show{display:block}
+.owner-auth-foot{margin-top:12px;color:#60758f;font-size:8px;text-align:center;line-height:1.5}
+.owner-logout-btn{
+  height:36px;padding:0 10px;border-radius:10px;border:1px solid rgba(255,255,255,.08);
+  background:#101f31;color:#93a6bf;font-size:8px;font-weight:900;cursor:pointer
 }
 
 
@@ -1458,7 +1470,7 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
 @media(max-width:900px){
   html{background:#060a11}.topbar{height:68px!important;padding:0 12px calc(0px + env(safe-area-inset-right)) 12px!important;position:sticky!important}.topbar-left{gap:9px!important;min-width:0}.topbar-logo{width:39px!important;height:39px!important}.topbar-brand{min-width:0}.topbar-title{font-size:13px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.topbar-sub{font-size:8px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:170px}.v603-badge{display:none}.update-time,.status-pill{display:none!important}.status-badge{width:32px!important;height:32px!important;padding:0!important;justify-content:center!important;border-radius:11px!important}.status-badge #statusText{display:none}.status-dot{width:8px!important;height:8px!important}.topbar-right{gap:5px!important}.btn-refresh{width:34px!important;height:34px!important;padding:0!important;justify-content:center!important;font-size:0!important}.btn-refresh .spin-icon{font-size:17px!important}.btn-refresh#btnInstallPwa{font-size:0!important}.btn-refresh#btnInstallPwa:before{content:'+';font-size:19px;font-weight:400;line-height:1}.owner-logout-btn{width:34px!important;height:34px!important;padding:0!important;font-size:0!important}.owner-logout-btn:before{content:'↪';font-size:16px!important}
 
-  .app-sidebar{left:8px!important;right:8px!important;bottom:calc(8px + env(safe-area-inset-bottom))!important;top:auto!important;width:auto!important;height:68px!important;border-radius:20px!important;padding:6px!important;background:rgba(9,17,29,.94)!important;backdrop-filter:blur(20px)!important;box-shadow:0 14px 42px rgba(0,0,0,.46)!important}.sidebar-head,.sidebar-foot{display:none!important}.sidebar-nav{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:3px!important;width:100%!important;padding:0!important}.sidebar-tab,body.sidebar-collapsed .sidebar-tab{min-height:56px!important;padding:5px 2px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;gap:3px!important;border-radius:14px!important}.sidebar-icon{font-size:17px!important;width:auto!important;min-width:0!important}.sidebar-label,body.sidebar-collapsed .sidebar-label{display:block!important;font-size:7.5px!important;line-height:1!important;overflow:visible!important;text-overflow:clip!important;max-width:100%!important}.sidebar-tab.active{background:rgba(237,28,36,.14)!important;box-shadow:none!important}.sidebar-tab.active:after{content:'';position:absolute;top:3px;width:16px;height:2px;border-radius:999px;background:#ed1c24}.sidebar-tab:hover:after{display:none!important}
+  .app-sidebar{left:8px!important;right:8px!important;bottom:calc(8px + env(safe-area-inset-bottom))!important;top:auto!important;width:auto!important;height:68px!important;border-radius:20px!important;padding:6px!important;background:rgba(9,17,29,.94)!important;backdrop-filter:blur(20px)!important;box-shadow:0 14px 42px rgba(0,0,0,.46)!important}.sidebar-head,.sidebar-foot{display:none!important}.sidebar-nav{display:grid!important;grid-template-columns:repeat(7,minmax(0,1fr))!important;gap:3px!important;width:100%!important;padding:0!important}.sidebar-tab,body.sidebar-collapsed .sidebar-tab{min-height:56px!important;padding:5px 2px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;gap:3px!important;border-radius:14px!important}.sidebar-icon{font-size:17px!important;width:auto!important;min-width:0!important}.sidebar-label,body.sidebar-collapsed .sidebar-label{display:block!important;font-size:7.5px!important;line-height:1!important;overflow:visible!important;text-overflow:clip!important;max-width:100%!important}.sidebar-tab.active{background:rgba(237,28,36,.14)!important;box-shadow:none!important}.sidebar-tab.active:after{content:'';position:absolute;top:3px;width:16px;height:2px;border-radius:999px;background:#ed1c24}.sidebar-tab:hover:after{display:none!important}
 
   .main,body.sidebar-collapsed .main{width:auto!important;max-width:none!important;margin:0!important;padding-left:10px!important;padding-right:10px!important;padding-bottom:104px!important}.dashboard-header-pro{margin-top:10px!important}.dashboard-header-main{padding:17px!important;border-radius:21px!important;display:block!important}.header-identity-line{gap:10px!important;margin-bottom:13px!important}.header-brand-mark{width:46px!important;height:46px!important;border-radius:14px!important}.header-identity-sub{font-size:15px!important;line-height:1.2!important}.header-period-live{font-size:8px!important}.header-highlights{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:6px!important}.highlight-pill{min-height:68px!important;padding:9px!important;border-radius:13px!important}.highlight-label{font-size:6px!important}.highlight-value{font-size:12px!important;margin-top:5px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.highlight-sub{display:none!important}.header-data-card{margin-top:10px!important;width:100%!important;min-width:0!important;padding:12px!important;border-radius:15px!important}.header-data-value{font-size:18px!important}.header-data-meta{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:5px!important}.header-mini-box{padding:8px!important;min-width:0}.header-mini-label{font-size:6px!important}.header-mini-value{font-size:7.5px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.header-data-sub{font-size:7px!important}
 
@@ -1481,6 +1493,9 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
 @media(display-mode:standalone){
   .topbar{padding-top:env(safe-area-inset-top)!important;height:calc(68px + env(safe-area-inset-top))!important}.team-install-banner{display:none!important}.main{padding-top:4px!important}
 }
+
+/* V6.0.3 Owner mobile nav has 6 destinations */
+@media(max-width:900px){.sidebar-nav{grid-template-columns:repeat(6,minmax(0,1fr))!important}.sidebar-label,body.sidebar-collapsed .sidebar-label{font-size:6.6px!important}.owner-auth-card{border-radius:24px!important;background:linear-gradient(180deg,#101e31,#091523)!important;border-color:rgba(255,255,255,.08)!important}.owner-auth-logo{width:68px!important;height:68px!important}.owner-auth-brand h2{font-size:18px!important}.owner-auth-field input{height:46px!important;border-radius:13px!important}.owner-auth-btn{height:46px!important;border-radius:13px!important;background:linear-gradient(135deg,#ed1c24,#c6171e)!important}}
 
 /* =========================================================
    V6.0.4 — MOBILE WIDTH / RESPONSIVE HOTFIX
@@ -1544,6 +1559,7 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
 
 @media (max-width:900px){
   .sidebar-nav{grid-template-columns:repeat(6,minmax(0,1fr))!important;}
+  .sidebar-label,body.sidebar-collapsed .sidebar-label{font-size:6.5px!important;}
 }
 /* =========================================================
    V6.0.4 — MODERN APP LOADING
@@ -1916,6 +1932,28 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
 </div>
 
 
+<div class="owner-auth-overlay" id="ownerAuthOverlay602">
+  <form class="owner-auth-card" onsubmit="loginOwner602(event)">
+    <div class="owner-auth-brand">
+      <img class="owner-auth-logo" src="cc-logo.png" alt="Chicken Crush">
+      <h2>Owner Login</h2>
+      <p>Akses khusus pemilik untuk membuka dashboard Owner dan panel input manual.</p>
+    </div>
+    <div class="owner-auth-field">
+      <label>Username</label>
+      <input id="ownerUsername602" type="text" autocomplete="username" placeholder="Username Owner">
+    </div>
+    <div class="owner-auth-field">
+      <label>Password</label>
+      <input id="ownerPassword602" type="password" autocomplete="current-password" placeholder="Password Owner">
+    </div>
+    <button class="owner-auth-btn" id="ownerLoginBtn602" type="submit">Masuk sebagai Owner</button>
+    <div class="owner-auth-msg" id="ownerAuthMsg602"></div>
+    <div class="owner-auth-foot">Login diverifikasi langsung oleh backend Apps Script. Password tidak disimpan di file aplikasi.</div>
+  </form>
+</div>
+
+
 <!-- ==================== TOP BAR ==================== -->
 <div class="topbar">
   <div class="topbar-left">
@@ -1939,23 +1977,8 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
       <span class="refresh-label">Refresh</span>
     </button>
     <span class="status-pill" title="Endpoint live tertanam di aplikasi">AUTO LIVE</span>
+    <button class="owner-logout-btn" id="ownerLogoutBtn" onclick="logoutOwner602()" style="display:none">Logout Owner</button>
     <button class="btn-refresh" id="btnInstallPwa" onclick="installPwa60()" title="Pasang sebagai aplikasi">&#8681; Install App</button>
-  </div>
-</div>
-
-<div class="main" id="installBannerHost602" style="padding-top:0;padding-bottom:0">
-  <div class="team-install-banner" id="teamInstallBanner602">
-    <div class="team-install-copy">
-      <img class="team-install-logo" src="cc-logo.png" alt="CC">
-      <div>
-        <div class="team-install-title">Install Chicken Crush Dashboard</div>
-        <div class="team-install-sub">Pasang ke Home Screen agar dashboard terasa seperti aplikasi dan tetap Auto Live.</div>
-      </div>
-    </div>
-    <div class="team-install-actions">
-      <button class="team-install-btn" type="button" onclick="installPwa60()">Install Aplikasi</button>
-      <button class="team-install-close" type="button" onclick="dismissInstall602()" aria-label="Tutup">×</button>
-    </div>
   </div>
 </div>
 
@@ -1989,6 +2012,10 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
     <button class="dashboard-tab sidebar-tab" id="tabPosUsageView"
       onclick="switchMainView('posUsage')" role="tab" aria-selected="false" data-tip="Pemakaian POS">
       <span class="sidebar-icon">▤</span><span class="sidebar-label">Pemakaian POS</span>
+    </button>
+    <button class="dashboard-tab sidebar-tab" id="tabAdminInputView"
+      onclick="switchMainView('adminInput')" role="tab" aria-selected="false" data-tip="Input Manual">
+      <span class="sidebar-icon">✎</span><span class="sidebar-label">Input Manual</span>
     </button>
     <button class="dashboard-tab sidebar-tab" id="tabDownloadView"
       onclick="switchMainView('download')" role="tab" aria-selected="false" data-tip="Download Laporan">
@@ -2333,6 +2360,7 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
     </div>
     <div class="mix-hero-actions">
       <div class="mix-period-badge" id="mixPeriod">Periode aktif</div>
+      <button class="mix-input-link" type="button" onclick="switchMainView('adminInput')">＋ Input Manual</button>
     </div>
   </div>
 
@@ -2530,6 +2558,20 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
   </div>
 </section>
 
+<section id="adminInputView" class="hidden-view owner-input-view">
+  <div class="mix-hero">
+    <div>
+      <div class="page-kicker">OWNER ONLY</div>
+      <h2>Panel Input Manual</h2>
+      <p>Panel input ini hanya disertakan pada paket Owner. Tim yang menggunakan paket Team tidak memiliki menu atau file input manual.</p>
+    </div>
+    <div class="mix-period-badge">OWNER</div>
+  </div>
+  <div class="owner-input-frame-wrap">
+    <iframe id="ownerInputFrame" class="owner-input-frame" src="about:blank" title="Chicken Crush Data Input Center"></iframe>
+  </div>
+</section>
+
 <section id="downloadView" class="download-center hidden-view">
   <div class="download-intro">
     <div>
@@ -2605,7 +2647,40 @@ body.sidebar-collapsed .main{margin-left:110px!important;width:min(1540px,calc(1
 </div><!-- /main -->
 
 <!-- ==================== MODAL ==================== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal-close" onclick="hideModal()">&times;</button>
+    <h2>&#9889; Setup Live Data</h2>
+    <p>Hubungkan dashboard ke Google Sheets melalui URL Web App Apps Script. Setelah terhubung, dashboard melakukan sinkronisasi otomatis setiap 60 detik dan memperbarui KPI, grafik, serta ranking tanpa reload halaman.</p>
 
+    <h3>Langkah 1: Buka Google Sheets</h3>
+    <p>Buka spreadsheet data omset CCI Anda, lalu klik <strong>Extensions &rarr; Apps Script</strong>.</p>
+
+    <h3>Langkah 2: Gunakan Code.gs Live Connector V3</h3>
+    <p>Gunakan file <strong>AppsScript_Live_Dashboard_V5_2.gs</strong> yang saya sertakan. Versi ini membaca header secara otomatis dan mendukung format data <strong>wide</strong> maupun <strong>long</strong>.</p>
+    <div class="modal-note">Status <b>LIVE</b> hanya akan aktif jika dashboard benar-benar menerima data outlet dari Google Sheet — bukan hanya karena URL bisa dibuka.</div>
+
+    <h3>Langkah 3: Deploy</h3>
+    <ol>
+      <li>Klik <strong>Deploy &rarr; New deployment</strong></li>
+      <li>Pilih tipe: <strong>Web app</strong></li>
+      <li>Set "Execute as" = <strong>Me</strong></li>
+      <li>Set "Who has access" = <strong>Anyone</strong></li>
+      <li>Klik <strong>Deploy</strong> dan salin URL yang muncul</li>
+    </ol>
+
+    <h3>Langkah 4: Tempel URL di Bawah</h3>
+    <input type="text" id="scriptUrl" placeholder="https://script.google.com/macros/s/.../exec">
+    <div id="connectionDiagnostic" class="live-diagnostic">Belum ada pengujian koneksi.</div>
+
+
+    <div class="modal-btns">
+      <button class="save" onclick="testConnection()">Tes Koneksi</button>
+      <button class="save" onclick="saveUrl()">Simpan & Hubungkan</button>
+      <button class="disconnect" onclick="disconnectUrl()">Putuskan Koneksi</button>
+      <button class="cancel" onclick="hideModal()">Batal</button>
+    </div>
+  </div>
 </div>
 
 <!-- ==================== JAVASCRIPT ==================== -->
@@ -4104,12 +4179,14 @@ function switchMainView(view){
   var salesMix=document.getElementById('salesMixView');
   var weeklyCompare=document.getElementById('weeklyCompareView');
   var posUsage=document.getElementById('posUsageView');
+  var adminInput=document.getElementById('adminInputView');
   var download=document.getElementById('downloadView');
   var td=document.getElementById('tabDashboardView');
   var tm=document.getElementById('tabMenuEsbView');
   var ts=document.getElementById('tabSalesMixView');
   var tw=document.getElementById('tabWeeklyCompareView');
   var tp=document.getElementById('tabPosUsageView');
+  var ta=document.getElementById('tabAdminInputView');
   var tx=document.getElementById('tabDownloadView');
 
   dashboard.classList.toggle('hidden-view',view!=='dashboard');
@@ -4117,6 +4194,7 @@ function switchMainView(view){
   salesMix.classList.toggle('hidden-view',view!=='salesMix');
   weeklyCompare.classList.toggle('hidden-view',view!=='weeklyCompare');
   posUsage.classList.toggle('hidden-view',view!=='posUsage');
+  adminInput.classList.toggle('hidden-view',view!=='adminInput');
   download.classList.toggle('hidden-view',view!=='download');
 
   td.classList.toggle('active',view==='dashboard');
@@ -4124,6 +4202,7 @@ function switchMainView(view){
   ts.classList.toggle('active',view==='salesMix');
   tw.classList.toggle('active',view==='weeklyCompare');
   tp.classList.toggle('active',view==='posUsage');
+  ta.classList.toggle('active',view==='adminInput');
   tx.classList.toggle('active',view==='download');
 
   td.setAttribute('aria-selected',view==='dashboard'?'true':'false');
@@ -4131,6 +4210,7 @@ function switchMainView(view){
   ts.setAttribute('aria-selected',view==='salesMix'?'true':'false');
   tw.setAttribute('aria-selected',view==='weeklyCompare'?'true':'false');
   tp.setAttribute('aria-selected',view==='posUsage'?'true':'false');
+  ta.setAttribute('aria-selected',view==='adminInput'?'true':'false');
   tx.setAttribute('aria-selected',view==='download'?'true':'false');
 
   if(view==='download')renderDownloadPreview();
@@ -4646,23 +4726,113 @@ if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)){
 }
 
 
-function dismissInstall602(){
-  var b=document.getElementById('teamInstallBanner602');
-  if(b)b.style.display='none';
-  try{sessionStorage.setItem('cci_install_banner_dismissed_v602','1')}catch(e){}
+/* ========== OWNER AUTH V6.0.3 ========== */
+const OWNER_TOKEN_KEY_602='cci_owner_token_v602';
+function ownerToken602(){
+  try{return localStorage.getItem(OWNER_TOKEN_KEY_602)||''}catch(e){return ''}
 }
-function syncInstallBanner602(){
-  var b=document.getElementById('teamInstallBanner602');
-  if(!b)return;
-  var dismissed=false;
-  try{dismissed=sessionStorage.getItem('cci_install_banner_dismissed_v602')==='1'}catch(e){}
-  b.style.display=(isStandalone60()||dismissed)?'none':'flex';
+function setOwnerToken602(token){
+  try{
+    if(token)localStorage.setItem(OWNER_TOKEN_KEY_602,token);
+    else localStorage.removeItem(OWNER_TOKEN_KEY_602);
+  }catch(e){}
 }
-window.addEventListener('load',syncInstallBanner602);
-window.addEventListener('appinstalled',function(){
-  var b=document.getElementById('teamInstallBanner602');
-  if(b)b.style.display='none';
-});
+function ownerAuthMessage602(text){
+  var el=document.getElementById('ownerAuthMsg602');
+  if(!el)return;
+  el.textContent=text||'';
+  el.classList.toggle('show',!!text);
+}
+function setOwnerAuthenticated602(ok){
+  var overlay=document.getElementById('ownerAuthOverlay602');
+  var logout=document.getElementById('ownerLogoutBtn');
+  if(overlay)overlay.style.display=ok?'none':'flex';
+  if(logout)logout.style.display=ok?'inline-flex':'none';
+
+  if(ok){
+    var frame=document.getElementById('ownerInputFrame');
+    if(frame && (!frame.getAttribute('src') || frame.getAttribute('src')==='about:blank')){
+      frame.setAttribute('src','input-owner.html#mix');
+    }
+  }
+}
+function ownerPost602(payload){
+  var body=new URLSearchParams();
+  Object.keys(payload||{}).forEach(function(k){body.append(k,payload[k]==null?'':String(payload[k]))});
+  return fetch(CCI_API_URL_V601,{method:'POST',body:body,cache:'no-store'}).then(function(r){
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    return r.json();
+  });
+}
+function loginOwner602(ev){
+  if(ev)ev.preventDefault();
+  var username=(document.getElementById('ownerUsername602').value||'').trim();
+  var password=document.getElementById('ownerPassword602').value||'';
+  var btn=document.getElementById('ownerLoginBtn602');
+
+  if(!username||!password){
+    ownerAuthMessage602('Username dan password wajib diisi.');
+    return false;
+  }
+
+  btn.disabled=true;
+  ownerAuthMessage602('Memverifikasi login Owner...');
+
+  ownerPost602({action:'ownerlogin',username:username,password:password}).then(function(res){
+    if(!res||res.ok!==true||!res.token){
+      throw new Error((res&&res.message)||'Login Owner gagal.');
+    }
+
+    setOwnerToken602(res.token);
+    ownerAuthMessage602('');
+    document.getElementById('ownerPassword602').value='';
+    setOwnerAuthenticated602(true);
+    refreshData();
+    refreshAnalytics(false);
+  }).catch(function(err){
+    setOwnerToken602('');
+    setOwnerAuthenticated602(false);
+    ownerAuthMessage602(err.message||'Login Owner gagal.');
+  }).finally(function(){
+    btn.disabled=false;
+  });
+
+  return false;
+}
+function verifyOwnerSession602(){
+  var token=ownerToken602();
+  if(!token){
+    setOwnerAuthenticated602(false);
+    return Promise.resolve(false);
+  }
+
+  var u=new URL(CCI_API_URL_V601);
+  u.searchParams.set('mode','ownerverify');
+  u.searchParams.set('token',token);
+  u.searchParams.set('_ts',Date.now());
+
+  return fetch(u.toString(),{cache:'no-store'}).then(function(r){
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    return r.json();
+  }).then(function(res){
+    if(!res||res.ok!==true)throw new Error((res&&res.message)||'Sesi Owner tidak valid.');
+    setOwnerAuthenticated602(true);
+    return true;
+  }).catch(function(){
+    setOwnerToken602('');
+    setOwnerAuthenticated602(false);
+    return false;
+  });
+}
+function logoutOwner602(){
+  setOwnerToken602('');
+  setOwnerAuthenticated602(false);
+  switchMainView('dashboard');
+  var p=document.getElementById('ownerPassword602');
+  if(p)p.value='';
+  ownerAuthMessage602('Anda telah logout.');
+}
+window.addEventListener('load',verifyOwnerSession602);
 
 
 
